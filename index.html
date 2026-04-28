@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Success Classes</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        /* Pura website par Google Font apply karne ke liye */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Inter', sans-serif; 
+        }
 
         header {
             background: #fff;
@@ -28,6 +38,7 @@
             font-weight: 800;
             color: #1a237e;
             text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         /* NAVIGATION */
@@ -47,9 +58,8 @@
             transition: 0.2s;
         }
 
-        /* Hover effect aur Active page highlight */
         .nav-link:hover, .nav-link.active {
-            background: rgba(26, 35, 126, 0.1); /* Halka blue color hamesha rahega */
+            background: rgba(26, 35, 126, 0.1);
             color: #1a237e;
         }
 
@@ -85,7 +95,6 @@
         /* RESPONSIVE (MOBILE) */
         @media (max-width: 900px) {
             .mobile-toggle { display: block; }
-
             .nav-container {
                 position: fixed;
                 top: 0;
@@ -98,12 +107,8 @@
                 z-index: 1001;
                 padding-top: 20px;
             }
-
             .nav-container.active { left: 0; }
-
             .nav-container ul { flex-direction: column; padding: 15px; }
-
-            /* Mobile Dropdown Styling */
             .dropdown > ul {
                 position: static;
                 display: none;
@@ -111,10 +116,7 @@
                 background: #fcfcfc;
                 padding-left: 15px;
             }
-
             .dropdown.open > ul { display: flex; }
-            
-            /* Overlay */
             .overlay {
                 display: none;
                 position: fixed;
@@ -125,205 +127,142 @@
             .overlay.active { display: block; }
         }
 
-        .content { margin-top: 100px; padding: 20px; text-align: center; }
+        /* MAIN CONTENT AREA */
+        .main {
+            height: auto;
+            width: 100%;
+            border: 3px solid darkred;
+            box-sizing: border-box;
+            text-align: center;
+            justify-content: center;
+            margin-top: 80px;
+        }
 
-        /* footer code */
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
 
-        /* FOOTER STYLES */
-footer {
-    background: #f8f9fa;
-    padding: 10px 10px;
-    text-align: center;
-    border-top: 1px solid #e0e0e0;
-    margin-top: 10px;
-}
+        .my-box {
+            flex: 0 0 calc(33.33% - 20px);
+            box-sizing: border-box;
+        }
 
-.footer-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
+        @media (max-width: 768px) {
+            .my-box { flex: 0 0 100%; }
+        }
 
-.footer-links li {
-    display: flex;
-    align-items: center;
-}
+        .custom-card {
+            background: #fff;
+            border-radius: 10px;
+            border-top: 5px solid #1a237e;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-.footer-links li:not(:last-child)::after {
-    content: "|";
-    margin-left: 15px;
-    color: #ccc;
-}
+        .custom-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
 
-.footer-links a {
-    text-decoration: none;
-    color: #1a237e;
-    font-weight: 500;
-    font-size: 14px;
-    transition: 0.3s;
-}
+        .card-title {
+            color: #1a237e;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
 
-.footer-links a:hover {
-    color: #ff5722;
-}
+        .feature-tag {
+            color: #d32f2f;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 20px;
+        }
 
-.copyright {
-    font-size: 14px;
-    color: #666;
-    font-weight: 600;
-}
+        .btn-custom {
+            background: #ffc107;
+            color: #000 !important;
+            font-weight: 700;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-size: .85rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-/* WHATSAPP FLOATING ICON */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: 0.3s;
-}
+        .btn-custom:hover {
+            background: #1a237e;
+            color: #fff !important;
+        }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #128c7e;
-    color: #fff;
-}
+        /* FOOTER */
+        footer {
+            background: #f8f9fa;
+            padding: 20px 10px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 10px;
+        }
 
-/* Mobile adjustments for footer */
-@media (max-width: 600px) {
-    .footer-links {
-        gap: 5px;
-    }
-    .footer-links li:not(:last-child)::after {
-        display: none; /* Mobile par separator hata dete hain for better spacing */
-    }
-    .footer-links li {
-        width: 30%; /* Do-do karke dikhenge mobile par */
-        justify-content: center;
-    }
-}
+        .footer-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
 
+        .footer-links a {
+            text-decoration: none;
+            color: #1a237e;
+            font-weight: 500;
+            font-size: 14px;
+        }
 
-/* main css */
-.main{
-    height: auto;
-    width: 100%;
-    border: 3px solid darkred;
-    box-sizing: border-box;
-    text-align: center;
-    justify-content: center;
-    margin-top: 80px;
-}
+        .copyright { font-size: 14px; color: #666; font-weight: 600; }
 
-
-/* Card ka Main Structure */
-/* Container jo boxes ko ek line mein layega */
-.main-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Boxes ke beech ka gap */
-    padding: 20px;
-    justify-content: center;
-}
-
-/* PC Mode: Ek line mein 3 boxes (100% / 3 = 33% approx) */
-.my-box {
-    flex: 0 0 calc(33.33% - 20px);
-    box-sizing: border-box;
-}
-
-/* Mobile Mode: Ek line mein 1 box */
-@media (max-width: 768px) {
-    .my-box {
-        flex: 0 0 100%;
-    }
-}
-
-/* Card Design (Wahi same look jo aapne manga tha) */
-.custom-card {
-    background: #fff;
-    border-radius: 10px;
-    border-top: 5px solid #1a237e;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.custom-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.card-title {
-    color: #1a237e;
-    font-weight: 700;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.feature-tag {
-    color: #d32f2f;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.btn-custom {
-    background: #ffc107;
-    color: #000 !important; /* Contrast ke liye black text */
-    font-weight: 700;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-size: .85rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn-custom:hover {
-    background: #1a237e;
-    color: #fff !important;
-}
+        .whatsapp-float {
+            position: fixed;
+            width: 60px; height: 60px;
+            bottom: 20px; right: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
-<!-------------- header ------------------>
 <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
 <header>
     <div class="mobile-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
-    
     <a href="/index.html" class="logo-text">DREAM SUCCESS CLASSES</a>
-    
     <nav class="nav-container" id="mainNav">
         <ul>
             <li class="mobile-toggle" style="text-align: right; padding-right: 15px; margin-bottom: 20px;" onclick="toggleMenu()">
                 <i class="fas fa-times"></i>
             </li>
-            
             <li><a href="/index.html" class="nav-link" id="homeLink">Home</a></li>
-            
             <li class="dropdown">
                 <a class="nav-link dropdown-trigger" onclick="handleAccordion(event, this)">Class <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
                 <ul>
@@ -332,29 +271,6 @@ footer {
                     <li><a href="/class12.html">Class 12</a></li>
                 </ul>
             </li>
-
-
-
-
-
-
-
-<li class="dropdown">
-                <a class="nav-link dropdown-trigger" onclick="handleAccordion(event, this)">Class <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
-                <ul>
-                    <li><a href="/class10.html">Class 10</a></li>
-                    <li><a href="/class11.html">Class 11</a></li>
-                    <li><a href="/class12.html">Class 12</a></li>
-                </ul>
-            </li>
-
-
-
-
-
-
-
-
             <li class="dropdown">
                 <a class="nav-link dropdown-trigger" onclick="handleAccordion(event, this)">Lucent GK <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
                 <ul>
@@ -362,7 +278,6 @@ footer {
                     <li><a href="/geography.html">Geography</a></li>
                     <li><a href="/polity.html">Polity</a></li>
                     <li><a href="/economics.html">Economics</a></li>
-                    <li><a href="/science.html">Science</a></li>
                 </ul>
             </li>
         </ul>
@@ -370,77 +285,31 @@ footer {
     <div style="width: 24px;" class="mobile-toggle"></div>
 </header>
 
-<!--------------header end ---------------------->
-
-<!----------main ------------>
 <section class="main">
-    
     <div class="main-container">
-    <div class="my-box">
-        <article class="custom-card">
-            <h3 class="card-title">Board Exam</h3> 
-            <span class="feature-tag">NCERT ( 8th to 12th )</span>
-            <div><button class="btn-custom">Enroll Now</button></div>
-        </article>
+        <div class="my-box">
+            <article class="custom-card">
+                <h3 class="card-title">Board Exam</h3> 
+                <span class="feature-tag">NCERT ( 8th to 12th )</span>
+                <div><button class="btn-custom">Enroll Now</button></div>
+            </article>
+        </div>
+        <div class="my-box">
+            <article class="custom-card" style="border-top-color: #d32f2f;">
+                <h3 class="card-title">Competitive Exam</h3> 
+                <span class="feature-tag">SSC, Railway, etc.</span>
+                <div><button class="btn-custom">Enroll Now</button></div>
+            </article>
+        </div>
+        <div class="my-box">
+            <article class="custom-card" style="border-top-color: #28a745;">
+                <h3 class="card-title">Lucent GK</h3> 
+                <span class="feature-tag">Quiz & Notes</span>
+                <div><button class="btn-custom">Enroll Now</button></div>
+            </article>
+        </div>
     </div>
-
-    <div class="my-box">
-        <article class="custom-card" style="border-top-color: #d32f2f;">
-            <h3 class="card-title">Competitive Exam</h3> 
-            <span class="feature-tag">SSC, Railway, etc.</span>
-            <div><button class="btn-custom">Enroll Now</button></div>
-        </article>
-    </div>
-    
-    <div class="my-box">
-        <article class="custom-card" style="border-top-color: #28a745;">
-            <h3 class="card-title">Lucent GK</h3> 
-            <span class="feature-tag">Quiz & Notes</span>
-            <div><button class="btn-custom">Enroll Now</button></div>
-        </article>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-<div class="main-container">
-    <div class="my-box">
-        <article class="custom-card">
-            <h3 class="card-title">Board Exam</h3> 
-            <span class="feature-tag">NCERT ( 8th to 12th )</span>
-            <div><button class="btn-custom">Enroll Now</button></div>
-        </article>
-    </div>
-
-    <div class="my-box">
-        <article class="custom-card" style="border-top-color: #d32f2f;">
-            <h3 class="card-title">Competitive Exam</h3> 
-            <span class="feature-tag">SSC, Railway, etc.</span>
-            <div><button class="btn-custom">Enroll Now</button></div>
-        </article>
-    </div>
-    
-    <div class="my-box">
-        <article class="custom-card" style="border-top-color: #28a745;">
-            <h3 class="card-title">Lucent GK</h3> 
-            <span class="feature-tag">Quiz & Notes</span>
-            <div><button class="btn-custom">Enroll Now</button></div>
-        </article>
-    </div>
-</div>
-
 </section>
-
-
- <!--------box end -------->
-
-
 
 <footer>
     <ul class="footer-links">
@@ -452,7 +321,7 @@ footer {
     <p class="copyright">@Dream Success Classes</p>
 </footer>
 
-<a href="https://wa.me/+91xxxxxxxxx?text=Hi, I have a query!" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/+91xxxxxxxxx" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -462,41 +331,26 @@ footer {
         document.getElementById("overlay").classList.toggle("active");
     }
 
-    // Accordion Logic: Ek khulega to dusra band
     function handleAccordion(e, el) {
         if (window.innerWidth <= 900) {
             e.preventDefault();
             const parentLi = el.parentElement;
-            
-            // Check agar ye pehle se open hai
             const isOpen = parentLi.classList.contains("open");
-
-            // Saare dropdowns band karo
-            document.querySelectorAll('.dropdown').forEach(item => {
-                item.classList.remove("open");
-            });
-
-            // Agar pehle band tha, to ab ise kholo
-            if (!isOpen) {
-                parentLi.classList.add("open");
-            }
+            document.querySelectorAll('.dropdown').forEach(item => item.classList.remove("open"));
+            if (!isOpen) parentLi.classList.add("open");
         }
     }
 
-    // Active Page Highlight Logic
     const currentPath = window.location.pathname;
     document.querySelectorAll('.nav-link, .dropdown > ul li a').forEach(link => {
         const href = link.getAttribute('href');
         if (href && currentPath.includes(href) && href !== "/") {
             link.classList.add('active');
-            
-            // Agar dropdown ka bacha active hai, to baap (Class/GK) ko bhi highlight rakho
             const parentTrigger = link.closest('.dropdown')?.querySelector('.dropdown-trigger');
             if (parentTrigger) parentTrigger.classList.add('active');
         }
     });
 
-    // Home special case
     if (currentPath === "/" || currentPath === "/index.html") {
         document.getElementById('homeLink').classList.add('active');
     }
