@@ -64,6 +64,8 @@
             margin-top: 70px; /* CLS FIX: Matches header height */
             padding: 20px 0;
             text-align: center;
+            background: whitesmoke;
+
         }
 
         .main-container {
@@ -72,7 +74,7 @@
         }
 
         /* CLS FIX: Aspect Ratio and Flex Basis */
-        .my-box { flex: 0 0 calc(33.33% - 20px); min-height: 200px; }
+        .my-box { flex: 0 0 calc(33.33% - 20px); min-height: 200px;}
 
         @media (max-width: 768px) { .my-box { flex: 0 0 100%; } }
 
@@ -111,28 +113,15 @@
     <a href="/index.html" class="logo-text">DREAM SUCCESS CLASSES</a>
     
     <nav class="nav-container" id="mainNav">
-        <ul>
-            <li class="mobile-toggle" style="text-align: right; padding-right: 15px; margin-bottom: 20px;" onclick="toggleMenu()">
-                <i class="fas fa-times"></i>
-            </li>
-            <li><a href="/index.html" class="nav-link" id="homeLink">Home</a></li>
-            <li class="dropdown">
-                <a class="nav-link dropdown-trigger" onclick="handleAccordion(event, this)" href="javascript:void(0)">Class <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
-                <ul>
-                    <li><a href="/class10.html">Class 10</a></li>
-                    <li><a href="/class11.html">Class 11</a></li>
-                    <li><a href="/class12.html">Class 12</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a class="nav-link dropdown-trigger" onclick="handleAccordion(event, this)" href="javascript:void(0)">Lucent GK <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
-                <ul>
-                    <li><a href="/history.html">History</a></li>
-                    <li><a href="/geography.html">Geography</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <ul>
+        <li class="mobile-toggle" style="text-align: right; padding-right: 15px; margin-bottom: 20px;" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </li>
+        <li><a href="/index.html" class="nav-link" id="homeLink">Home</a></li>
+        <li><a href="/class.html" class="nav-link">Class</a></li>
+        <li><a href="/notes.html" class="nav-link">Notes</a></li>
+    </ul>
+</nav>
     <div style="width: 24px;" class="mobile-toggle"></div>
 </header>
 
@@ -170,6 +159,15 @@
                 <div><button class="btn-custom">Enroll Now</button></div>
             </article>
         </div>
+
+        <div class="my-box">
+            <article class="custom-card" style="border-top-color: #d32f2f;">
+                <h3 class="card-title">Competitive Exam</h3> 
+                <span class="feature-tag">SSC, Railway, etc.</span>
+                <div><button class="btn-custom">Enroll Now</button></div>
+            </article>
+        </div>
+        
         <div class="my-box">
             <article class="custom-card" style="border-top-color: #28a745;">
                 <h3 class="card-title">Lucent GK</h3> 
