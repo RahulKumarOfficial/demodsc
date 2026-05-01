@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +11,7 @@
 		padding: 0;
 		font-family: sans-serif;
 		background: whitesmoke;
+		height: auto;
 	}
 
 /* header css start */
@@ -41,6 +41,12 @@ li{
 	color: white;
 	padding: 10px;
 	margin: 0;
+	height: 100%;
+	width: auto;
+	padding: 13px;
+cursor: pointer;
+font-weight: bold;
+
 	
 
 }
@@ -58,7 +64,7 @@ border: 3px solid red;
 	}
 
 	.main_content{
-		height: 500px;
+		height: auto;
 width: 80%;
 box-sizing: border-box;
 float: left;
@@ -163,6 +169,16 @@ footer{
 }
 
 
+@media (max-width: 426px){
+	.main_content{
+		width: 100%;
+		}
+		.sidebar{
+		display: none;
+	}
+	.box{width: 90%;  }
+} 
+	
 </style>
 <body>
 
