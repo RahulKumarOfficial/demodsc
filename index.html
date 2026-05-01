@@ -1,234 +1,247 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dream Success Classes</title>
-    <meta name="description" content="Dream Success Classes - Quality coaching for Boards, Competitive exams and Lucent GK.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
-
-    <style>
-        /* CSS RESET & CLS FIX */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-
-        header {
-            background: #fff;
-            height: 70px; /* CLS FIX: Locked height */
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 5%;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .logo-text { font-size: 18px; font-weight: 800; color: #1a237e; text-decoration: none; }
-
-        .nav-container ul { display: flex; list-style: none; gap: 5px; }
-        .nav-link { color: #1a237e; padding: 10px 15px; font-weight: 600; text-decoration: none; border-radius: 6px; display: block; transition: 0.2s; }
-        .nav-link:hover, .nav-link.active { background: rgba(26, 35, 126, 0.1); }
-
-        .dropdown { position: relative; }
-        .dropdown > ul {
-            position: absolute; top: 100%; left: 0; background: #fff; min-width: 180px;
-            flex-direction: column; box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-            display: none; border-radius: 0 0 8px 8px; padding: 10px 0;
-        }
-        .dropdown:hover > ul { display: flex; }
-        .dropdown > ul li a { padding: 10px 20px; color: #333; text-decoration: none; display: block; }
-
-        .mobile-toggle { display: none; font-size: 24px; cursor: pointer; color: #1a237e; background: none; border: none; }
-
-        @media (max-width: 900px) {
-            .mobile-toggle { display: block; }
-            .nav-container {
-                position: fixed; top: 0; left: -100%; width: 280px; height: 100vh;
-                background: #fff; transition: 0.3s ease; z-index: 1001; padding-top: 20px;
-            }
-            .nav-container.active { left: 0; }
-            .nav-container ul { flex-direction: column; padding: 15px; }
-            .dropdown > ul { position: static; display: none; background: #fcfcfc; padding-left: 15px; box-shadow: none; }
-            .dropdown.open > ul { display: flex; }
-        }
-
-        /* MAIN SECTION - Design bilkul wahi hai */
-        .main { 
-            margin-top: 70px; /* CLS FIX: Matches header height */
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .main-container {
-            display: flex; flex-wrap: wrap; gap: 20px; padding: 20px;
-            justify-content: center; max-width: 1200px; margin: 0 auto;
-        }
-
-        /* CLS FIX: Aspect Ratio and Flex Basis */
-        .my-box { flex: 0 0 calc(33.33% - 20px); min-height: 200px; }
-
-        @media (max-width: 768px) { .my-box { flex: 0 0 100%; } }
-
-        .custom-card {
-            background: #fff; border-radius: 10px; border-top: 5px solid #1a237e;
-            padding: 25px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease; height: 100%; display: flex;
-            flex-direction: column; justify-content: space-between;
-        }
-        .custom-card:hover { transform: translateY(-8px); }
-
-        .card-title { color: #1a237e; font-weight: 700; font-size: 1.5rem; margin-bottom: 10px; }
-        .feature-tag { color: #d32f2f; font-weight: 600; display: block; margin-bottom: 20px; }
-        .btn-custom {
-            background: #ffc107; color: #000; font-weight: 700; border: none;
-            padding: 12px 25px; border-radius: 30px; cursor: pointer; text-transform: uppercase;
-        }
-
-        footer { background: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #e0e0e0; margin-top: 40px; }
-        .footer-links { list-style: none; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 10px; }
-        .footer-links a { text-decoration: none; color: #1a237e; font-size: 14px; font-weight: 500;  height: 50px: width:}
-
-        .whatsapp-float {
-            position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px;
-            background-color: #25d366; color: #FFF; border-radius: 50px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); z-index: 1000;
-            text-decoration: none;
-        }
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
 </head>
+<style>
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		background: whitesmoke;
+	}
+
+/* header css start */
+
+header{
+	height: 50px;
+	width: 100%;
+	background: blue;
+	box-sizing: border-box;
+
+	
+}
+
+ul{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+float: right;
+
+
+
+}
+	
+li{
+	display: inline-block;
+	list-style: none;
+	color: white;
+	padding: 10px;
+	margin: 0;
+	
+
+}
+
+/* header css End */
+
+
+.main{
+
+height: auto;
+width: 100%;
+box-sizing: border-box;
+float: left;
+border: 3px solid red;
+	}
+
+	.main_content{
+		height: 500px;
+width: 80%;
+box-sizing: border-box;
+float: left;
+border: 3px solid red;
+	}
+
+	.sidebar{
+height: 500px;
+width: 20%;
+box-sizing: border-box;
+float: right;
+
+	}
+
+.sidebar-list{
+border-bottom: 2px solid red;
+margin: 0;
+padding: 10px;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+/* Cources box css start */
+.box{
+	height: 175px;
+	width: 30%;
+	box-sizing: border-box;
+	float: left;
+	border: 0.1px solid blue;
+	border-radius: 15px;
+	margin: 10px;
+	background: white;
+
+
+}
+
+.box-name{
+	color: darkcyan;
+	font-weight: bold;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+	padding-top: 15px;
+
+}
+
+.box-title{
+	color: red;
+	margin: 0;
+	padding: 0;
+	padding-top: 15px;
+	padding-bottom: 20px;
+
+}
+
+.box-button{
+height: 40px;
+width: 150px;
+color: white;
+background: darkblue;
+border-radius: 30px;
+font-size: 18px;
+cursor: pointer;
+font-weight: bold;
+border: 2px solid darkblue;
+
+}
+
+.box-button:hover{
+color: darkblue;
+background: white;
+
+
+
+}
+/* Cources box css End */
+
+/* Footer css Start */
+footer{
+		height: 200px;
+		width: 100%;
+		background: black;
+		box-sizing: border-box;
+		float: left;
+	}
+
+/* Footer css End */
+
+
+@media (max-width: 1024px){
+	.main_content{
+		width: 100%;
+		 
+	}
+
+	.sidebar{
+		display: none;
+	}
+}
+
+
+</style>
 <body>
 
+	<!----- Header Start Code ------->
 <header>
-    <button class="mobile-toggle" onclick="toggleMenu()" aria-label="Open Menu"><i class="fas fa-bars"></i></button>
-    <a href="/index.html" class="logo-text">DREAM SUCCESS CLASSES</a>
-
-    <nav class="nav-container" id="mainNav">
-        <ul>
-            <li class="mobile-toggle" style="text-align: right; padding-right: 15px; margin-bottom: 20px;" onclick="toggleMenu()">
-                <i class="fas fa-times"></i>
-            </li>
-            <li><a href="/index.html" class="nav-link" id="homeLink">Home</a></li>
-            <li class="dropdown">
-                <a class="nav-link dropdown-trigger" onclick="handleAccordion(event, this)" href="javascript:void(0)">Class <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
-                <ul>
-                    <li><a href="/class10.html">Class 10</a></li>
-                    <li><a href="/class11.html">Class 11</a></li>
-                    <li><a href="/class12.html">Class 12</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a class="nav-link dropdown-trigger" onclick="handleAccordion(event, this)" href="javascript:void(0)">Lucent GK <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
-                <ul>
-                    <li><a href="/history.html">History</a></li>
-                    <li><a href="/geography.html">Geography</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-    <div style="width: 24px;" class="mobile-toggle"></div>
+	<ul>
+		<li> home</li>
+		<li>notes</li>
+		<li>objectives</li>
+		<li>subjectives</li>
+	</ul>
 </header>
 
-<main class="main">
-    <div class="main-container">
-        <div class="my-box">
-            <article class="custom-card">
-                <h3 class="card-title">Board Exam</h3> 
-                <span class="feature-tag">NCERT ( 8th to 12th )</span>
-                <div><button class="btn-custom">Enroll Now</button></div>
-            </article>
-        </div>
-
-        <div class="my-box">
-            <article class="custom-card">
-                <h3 class="card-title">Board Exam</h3> 
-                <span class="feature-tag">NCERT ( 8th to 12th )</span>
-                <div><button class="btn-custom">Enroll Now</button></div>
-            </article>
-        </div>
-
-        <div class="my-box">
-            <article class="custom-card">
-                <h3 class="card-title">Board Exam</h3> 
-                <span class="feature-tag">NCERT ( 8th to 12th )</span>
-                <div><button class="btn-custom">Enroll Now</button></div>
-            </article>
-        </div>
-
-        
-        <div class="my-box">
-            <article class="custom-card" style="border-top-color: #d32f2f;">
-                <h3 class="card-title">Competitive Exam</h3> 
-                <span class="feature-tag">SSC, Railway, etc.</span>
-                <div><button class="btn-custom">Enroll Now</button></div>
-            </article>
-        </div>
-        <div class="my-box">
-            <article class="custom-card" style="border-top-color: #28a745;">
-                <h3 class="card-title">Lucent GK</h3> 
-                <span class="feature-tag">Quiz & Notes</span>
-                <div><button class="btn-custom">Enroll Now</button></div>
-            </article>
-        </div>
-    </div>
+<!----- Header Start End ------->
 
 
+<!----- Main Start Code ------->
+
+<section class="main">
+	<div class="main_content">
+
+<!----- Cources Box Start Code ------->
+
+		<div class="box" style="border-top: 5px solid blue;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
+
+		<div class="box" style="border-top: 5px solid darkred;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
+
+<div class="box" style="border-top: 5px solid silver;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
 
 
-</main>
+<div class="box" style="border-top: 5px solid goldenrod;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
 
-<!------article------->
-    <article style="height: auto; width: 100%; background: white; box-sizing: border-box; float: left; border: 3px solid red; padding: 20px;"> 
+		<div class="box" style="border-top: 5px solid blue;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
 
-<p style="text-align: left;"><b><u>&nbsp;<span face="Inter, sans-serif" style="color: #1a237e; font-size: 28px;">Dream Success Classes</span></u></b></p><span face="&quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif" style="background-color: white; color: #333333; font-size: 16px;"></span><h3 style="box-sizing: border-box; color: #444444; font-family: Inter, sans-serif; font-size: 20px; font-weight: 500; line-height: 1.2; margin: 10px 0px 0.5rem; padding: 0px; text-align: left;">A Complete Free Learning Platform</h3><p style="box-sizing: border-box; color: #333333; font-family: Inter, sans-serif; font-size: 16px; margin: 0px 0px 15px; padding: 0px; text-align: left;"><span style="box-sizing: border-box; font-weight: bolder; margin: 0px; padding: 0px;">Dream Success Classes</span>&nbsp;ek aisa online platform hai jahan har student bina kisi fees ke apni padhai ko behtar bana sakta hai. Yahan par aapko&nbsp;<span style="box-sizing: border-box; font-weight: bolder; margin: 0px; padding: 0px;">free notes, online tests, objective aur subjective questions</span>&nbsp;sab kuch ek hi jagah milta hai.</p><p style="box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; margin: 0px 0px 15px; padding: 0px; text-align: right;"><b><span style="color: #21309e;">Rahul Kumar&nbsp;</span></b></p><p style="box-sizing: border-box; font-family: Inter, sans-serif; font-size: 16px; margin: 0px 0px 15px; padding: 0px; text-align: right;"><b><span style="color: #333333;">Founder &amp; Director</span></b></p>
+<div class="box" style="border-top: 5px solid blue;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
 
-    </article>
+<!----- Cources Box Start End  ------->
+	</div>
 
-    <!---------article end ------>
 
-<footer style="height: 50px; width: 100%; box-sizing: border-box; float: left;">
-    <ul class="footer-links">
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="/contact.html">Contact Us</a></li>
-    </ul>
-    <p class="copyright">@Dream Success Classes</p>
-</footer>
+	<!----- Sidebar Start Code ------->
+	<div class="sidebar">
+		<center><h3 style="background: black; color: yellow; padding: 10px; margin: 0;"> Notes</h3>
 
-<a href="https://wa.me/+91xxxxxxxxx" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-</a>
+<a href="#"><h4 class="sidebar-list"> Class 12 Mock Test </h4></a>
+<a href="#"><h4 class="sidebar-list"> Notes </h4></a>
 
-<script>
-    function toggleMenu() {
-        document.getElementById("mainNav").classList.toggle("active");
-    }
 
-    function handleAccordion(e, el) {
-        if (window.innerWidth <= 900) {
-            e.preventDefault();
-            const parentLi = el.parentElement;
-            parentLi.classList.toggle("open");
-        }
-    }
+</center>
+	</div>
+</section>
+<!----- Sidebar Code End  ------->
 
-    // Active Highlight Logic
-    const currentPath = window.location.pathname;
-    document.querySelectorAll('.nav-link, .dropdown > ul li a').forEach(link => {
-        if (link.getAttribute('href') && currentPath.includes(link.getAttribute('href')) && link.getAttribute('href') !== "/") {
-            link.classList.add('active');
-        }
-    });
-    if (currentPath === "/" || currentPath === "/index.html") {
-        document.getElementById('homeLink').classList.add('active');
-    }
-</script>
+<article style="height: 300px; width: 100%; border: 2px solid black; box-sizing: border-box; float: left;"> </article> 
+
+<footer> </footer>
 </body>
 </html>
