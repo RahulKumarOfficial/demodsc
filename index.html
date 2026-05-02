@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,7 +65,7 @@ float: left;
 border: 3px solid red;
 	}
 
-	.main_content{
+	.main_content{       /* cources box */
 		height: auto;
 width: 80%;
 box-sizing: border-box;
@@ -72,11 +73,13 @@ float: left;
 border: 3px solid red;
 	}
 
-	.sidebar{
+	.sidebar{   /* sidbar */
 height: auto;
 width: 20%;
 box-sizing: border-box;
 float: right;
+background: white;
+border: 1px solid blue;
 
 	}
 
@@ -84,6 +87,11 @@ float: right;
 border-bottom: 2px solid red;
 margin: 0;
 padding: 10px;
+}
+
+.sidebar-list:hover{
+	background: darkblue;
+	color: white;
 }
 
 a{
@@ -101,8 +109,6 @@ a{
 	border-radius: 15px;
 	margin: 10px;
 	background: white;
-
-
 }
 
 .box-name{
@@ -112,7 +118,6 @@ a{
 	margin: 0;
 	padding: 0;
 	padding-top: 15px;
-
 }
 
 .box-title{
@@ -121,7 +126,6 @@ a{
 	padding: 0;
 	padding-top: 15px;
 	padding-bottom: 20px;
-
 }
 
 .box-button{
@@ -140,15 +144,13 @@ border: 2px solid darkblue;
 .box-button:hover{
 color: darkblue;
 background: white;
-
-
-
 }
+
 /* Cources box css End */
 
 /* Footer css Start */
 footer{
-		height: 200px;
+		height: 80px;
 		width: 100%;
 		background: black;
 		box-sizing: border-box;
@@ -160,8 +162,7 @@ footer{
 
 @media (max-width: 768px){
 	.main_content{
-		width: 100%;
-		 
+		width: 100%;	 
 	}
 }
 
@@ -274,6 +275,11 @@ footer{
 
 <article style="height: 300px; width: 100%; border: 2px solid black; box-sizing: border-box; float: left;"> </article> 
 
-<footer> </footer>
+<footer>
+	<center>
+<p style="height: 80%; width: 100%; background: black; color: white;"> Home I Privacy Policy I ContactUS</p>
+
+<p style="height: 20%; width: 100%; background: black; color: yellow; border-top: 2px solid #323232; padding-top: 10px; padding-bottom: 10px;"> @dream Success Classes</p></center>
+</footer>
 </body>
 </html>
