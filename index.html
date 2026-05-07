@@ -1,36 +1,443 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Floating Translate Fix</title>
-    <style>
-        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
-        .content { max-width: 600px; margin: auto; border: 1px solid #ccc; padding: 20px; }
-    </style>
+	<title>DSC</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
 </head>
+<style>
+	body{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		background: whitesmoke;
+		height: auto;
+	}
+
+/* header css start */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px; /* Header space */
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.navbar {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+/* Nav Menu */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #2563eb;
+}
+
+.btn-login {
+    background: #2563eb;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-login:hover {
+    background: #1d4ed8;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* Icons & Responsive */
+.hamburger, .close-icon {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 991px) {
+    .hamburger { display: block; }
+    
+    .desktop-only { display: none; }
+
+    .nav-menu {
+        position: fixed;
+        right: -100%; /* Initially hidden */
+        top: 0;
+        width: 280px;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 80px 30px;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Ultra Smooth */
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        z-index: 1001;
+        align-items: flex-start;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mobile-btn {
+        margin-top: 20px;
+    }
+}
+
+/* Overlay Styling */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px); /* Modern blur effect */
+    display: none;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+/* header css End */
+
+
+.main{
+
+height: auto;
+width: 100%;
+box-sizing: border-box;
+float: left;
+border: 3px solid red;
+	}
+
+	.main_content{       /* cources box */
+		height: auto;
+width: 80%;
+box-sizing: border-box;
+float: left;
+border: 3px solid red;
+	}
+
+	.sidebar{   /* sidbar */
+height: auto;
+width: 20%;
+box-sizing: border-box;
+float: right;
+background: white;
+border: 1px solid blue;
+
+	}
+
+.sidebar-list{
+border-bottom: 2px solid red;
+margin: 0;
+padding: 10px;
+}
+
+.sidebar-list:hover{
+	background: darkblue;
+	color: white;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+/* Cources box css start */
+.box{
+	height: 175px;
+	width: 30%;
+	box-sizing: border-box;
+	float: left;
+	border: 0.1px solid blue;
+	border-radius: 15px;
+	margin: 10px;
+	background: white;
+}
+
+.box-name{
+	color: blue;
+	font-weight: bold;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+	padding-top: 15px;
+}
+
+.box-title{
+	color: red;
+	margin: 0;
+	padding: 0;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+
+.box-button{
+height: 40px;
+width: 150px;
+color: white;
+background: darkblue;
+border-radius: 30px;
+font-size: 18px;
+cursor: pointer;
+font-weight: bold;
+border: 2px solid darkblue;
+
+}
+
+.box-button:hover{
+color: darkblue;
+background: white;
+}
+
+/* Cources box css End */
+
+/* Footer css Start */
+footer{
+		height: 80px;
+		width: 100%;
+		background: black;
+		box-sizing: border-box;
+		float: left;
+	}
+
+/* Footer css End */
+
+
+@media (max-width: 768px){
+	.main_content{
+		width: 100%;	 
+	}
+	.box{width: 45%;  }
+}
+
+
+
+@media (max-width: 1024px){
+	.main_content{
+		width: 100%;
+	}
+
+	.sidebar{
+		width: 100%;
+		float: left;
+		display: block;
+}
+
+@media (max-width: 426px){
+	.main_content{
+		width: 100%;
+		}
+		.sidebar{
+		width: 100%;
+		float: left;
+		display: block;
+	}
+	.box{width: 90%;  }
+} 
+	
+</style>
 <body>
 
-    <div class="content">
-        <h1>Testing Floating Widget</h1>
-        <p>Agar sab sahi raha, toh screen ke niche-daayein (bottom-right) kone mein ek "Select Language" ka button dikhega.</p>
-        <p>Internet on rakhiyega!</p>
-    </div>
+	<!----- Header Start Code ------->
+<!-- Font Awesome for Professional Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <script>
-        window.gtranslateSettings = {
-            "default_language": "en",
-            "languages": ["en", "hi", "bn","gu","ta","pa","te"],
-            "wrapper_selector": ".gtranslate_wrapper", // Isko khali div ke liye rehne dein
-            "flag_size": 24,
-            "horizontal_position": "right",
-            "vertical_position": "bottom",
-            "alt_flags": {"en": "usa"}
-        }
-    </script>
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">KGS<span>GK</span></div>
 
-    <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+        <!-- Desktop & Mobile Menu -->
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item close-icon" onclick="toggleMenu()">
+                <i class="fas fa-times"></i>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Courses</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">E-Books</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Updates</a></li>
+            <li class="nav-item mobile-btn">
+                <a href="#" class="btn-login">Login</a>
+            </li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="#" class="btn-login desktop-only">Login</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Overlay background -->
+<div class="menu-overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!----- Header Start End ------->
+
+
+<!----- Main Start Code ------->
+
+<section class="main">
+	<div class="main_content">
+
+<!----- Cources Box Start Code ------->
+
+		<div class="box" style="border-top: 5px solid blue;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
+
+		<div class="box" style="border-top: 5px solid darkred;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
+
+<div class="box" style="border-top: 5px solid silver;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
+
+
+<div class="box" style="border-top: 5px solid goldenrod;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
+
+		<div class="box" style="border-top: 5px solid blue;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
+
+<div class="box" style="border-top: 5px solid blue;">
+			<center><h2 class="box-name"> Lucent Gk</h2></center>
+<center><h3 class="box-title"> Class 8th to 12th</h3></center>
+			<center><button class="box-button">Click Here</button> </center>
+		</div>
+
+<!----- Cources Box Start End  ------->
+	</div>
+
+
+	<!----- Sidebar Start Code ------->
+	<div class="sidebar">
+		<center><h3 style="background: black; color: yellow; padding: 10px; margin: 0;"> Notes</h3>
+
+<a href="#"><h4 class="sidebar-list"> Class 12 Mock Test </h4></a>
+<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+
+
+</center>
+	</div>
+</section>
+<!----- Sidebar Code End  ------->
+
+<article style="height: auto; width: 100%; border: 2px solid black; box-sizing: border-box; float: left;"> 
+<p style="background-color: white; box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Atkinson Hyperlegible&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15.504px; line-height: 1.65; margin: 0px 0px 0.875rem;"><b><span style="color: red;">When configuring</span></b><span style="color: #1e1e1e;"> a screen reader, users select a default language. If the language of a webpage is not specified, the screen reader assumes the default language set by the user. Language settings are an issue for users who speak multiple languages and access website in more than one language. It is essential to specify a language and ensure that it is valid so website text is pronounced correctly.</span></p><p style="background-color: white; box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Atkinson Hyperlegible&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15.504px; line-height: 1.65; margin: 0px 0px 0.875rem;"><span style="color: #1e1e1e;">Screen readers use different sound libraries for each </span><span style="color: #2b00fe;"><b>language, based on</b></span><span style="color: #1e1e1e;"> the pronunciation and characteristics of that language. Screen readers can switch between these language libraries easily, but only if the documents correctly specify which language(s) to read. If the language is not specified, the screen reader reads the document in the user's default language, resulting in a confusing accent! It is impossible to understand anything when screen readers are using the wrong language library.</span></p>
+</article> 
+
+<footer>
+	<center>
+<p style="height: 80%; width: 100%; background: black; color: white;"> Home I Privacy Policy I ContactUS</p>
+
+<p style="height: 20%; width: 100%; background: black; color: yellow; border-top: 2px solid #323232; padding-top: 10px; padding-bottom: 10px;"> @dream Success Classes</p></center>
+</footer>
+<script>
+function toggleMenu() {
+    const navMenu = document.getElementById("nav-menu");
+    const overlay = document.getElementById("overlay");
     
-    <div class="gtranslate_wrapper"></div>
+    // Toggle class "active"
+    navMenu.classList.toggle("active");
+    overlay.classList.toggle("active");
 
+    // Smooth scroll disable jab menu open ho
+    if (navMenu.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "auto";
+    }
+}
+</script>
 </body>
 </html>
