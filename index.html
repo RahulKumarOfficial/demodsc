@@ -51,13 +51,17 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bolder;
     color: darkblue;
     letter-spacing: 1px;
    
 }
 
+.logo a{
+    text-decoration: none;
+    color:darkblue;
+}
 
 /* Right Side Wrapper */
 .nav-right-container {
@@ -194,7 +198,7 @@ height: auto;
 width: 100%;
 box-sizing: border-box;
 float: left;
-border: 3px solid red;
+padding-top: 10px;
 	}
 
 	.main_content{       /* cources box */
@@ -202,7 +206,6 @@ border: 3px solid red;
 width: 80%;
 box-sizing: border-box;
 float: left;
-border: 3px solid red;
 	}
 
 	.sidebar{   /* sidbar */
@@ -216,14 +219,14 @@ border: 1px solid blue;
 	}
 
 .sidebar-list{
-border-bottom: 2px solid red;
+border-bottom: 1px solid black;
 margin: 0;
 padding: 10px;
 }
 
 .sidebar-list:hover{
-	background: darkblue;
-	color: white;
+	background: yellow;
+	color: black;
 }
 
 a{
@@ -289,6 +292,10 @@ footer{
 		float: left;
 	}
 
+.footer-link{
+    text-decoration: none;
+    color: white;
+}
 /* Footer css End */
 
 
@@ -323,7 +330,8 @@ footer{
 	}
 	.box{width: 90%;  }
 } 
-	
+
+
 </style>
 <body>
 
@@ -332,7 +340,7 @@ footer{
 
 <header class="header" role="banner">
     <nav class="navbar" role="navigation">
-        <div class="logo">Dream Success Classes</div>
+        <h1 class="logo"><a href="#">Dream Success Classes</a></h1>
 
         <!-- PC mode mein ye container sab right side le jayega -->
         <div class="nav-right-container">
@@ -440,16 +448,19 @@ footer{
 <!----- Sidebar Code End  ------->
 
 <article style="height: auto; width: 100%; border: 2px solid black; box-sizing: border-box; float: left;"> 
-<p style="background-color: white; box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Atkinson Hyperlegible&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15.504px; line-height: 1.65; margin: 0px 0px 0.875rem;"><span style="color: #1e1e1e;">Screen readers use different sound libraries for each </span><span style="color: #2b00fe;"><b>language, based on</b></span><span style="color: #1e1e1e;"> the pronunciation and characteristics of that language. Screen readers can switch between these language libraries easily, but only if the documents correctly specify which language(s) to read. If the language is not specified, the screen reader reads the document in the user's default language, resulting in a confusing accent! It is impossible to understand anything when screen readers are using the wrong language library.</span></p>
+<p style="background-color: white; padding: 10px; box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Atkinson Hyperlegible&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15.504px; line-height: 1.65; margin: 0px 0px 0.875rem;"><span style="color: #1e1e1e;">Screen readers use different sound libraries for each </span><span style="color: #2b00fe;"><b>language, based on</b></span><span style="color: #1e1e1e;"> the pronunciation and characteristics of that language. Screen readers can switch between these language libraries easily, but only if the documents correctly specify which language(s) to read. If the language is not specified, the screen reader reads the document in the user's default language, resulting in a confusing accent! It is impossible to understand anything when screen readers are using the wrong language library.</span></p>
 
 
 </article> 
 
 <footer role="contentinfo">
 	<center>
-<p style="height: 80%; width: 100%; background: black; color: white; font-size: 12px; padding-bottom: 5px; padding-top: 5px;"> Term & conditions I Privacy Policy I ContactUS I disclaimber</p>
+<p style="height: 80%; width: 100%; color: white; font-size: 12px; padding-bottom: 5px; padding-top: 5px;"> 
+    <a class="footer-link" href="#">Term & conditions</a> I 
+    <a  class="footer-link" href="#">Privacy Policy</a> I <a class="footer-link" href="#">ContactUS</a> I 
+    <a class="footer-link" href="#">disclaimber</a></p>
 
-<p style="height: 20%; width: 100%; background: black; color: yellow; border-top: 2px solid #323232; padding-top: 10px; padding-bottom: 10px;">©2026 I dream Success Classes</p></center>
+<p style="height: 20%; width: 100%; color: yellow; border-top: 2px solid #323232; padding-top: 10px; padding-bottom: 10px;">©2026 I dream Success Classes</p></center>
 </footer>
 <script>
 function toggleMenu() {
