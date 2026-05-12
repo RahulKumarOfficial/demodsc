@@ -219,9 +219,11 @@ border: 1px solid blue;
 	}
 
 .sidebar-list{
-border-bottom: 1px solid black;
+border-bottom: 1px solid lightgray;
 margin: 0;
 padding: 10px;
+padding-left: 20px;
+color: darkblue;
 }
 
 .sidebar-list:hover{
@@ -313,6 +315,7 @@ footer{
 .footer-link{
     text-decoration: none;
     color: white;
+
 }
 /* Footer css End */
 
@@ -346,7 +349,15 @@ footer{
 		float: left;
 		display: block;
 	}
-	.box{width: 90%;  }
+	.box{width: 95%;  }
+    .footer-link{
+        font-size: 11px;
+    }
+
+    .nav-item{
+        line-height: 0px;
+    }
+       
 } 
 
 
@@ -375,10 +386,11 @@ footer{
 <li class="nav-item"><a href="#" class="nav-link">Mock Test</a></li>
 <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
                 
-                <!-- Login for Mobile -->
+                <!-- Login for Mobile -- >
                 <li class="nav-item mobile-btn">
                     <a href="#" class="btn-login">Login</a>
                 </li>
+                <----------------->
             </ul>
 
 
@@ -463,7 +475,7 @@ footer{
 </section>
 <!----- Sidebar Code End  ------->
 
-<article style="height: auto; width: 100%; border: 2px solid black; box-sizing: border-box; float: left;"> 
+<article style="height: auto; width: 100%; border: 1px solid lightgrey; box-sizing: border-box; float: left;"> 
 <p style="background-color: white; padding: 10px; box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Atkinson Hyperlegible&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15.504px; line-height: 1.65; margin: 0px 0px 0.875rem;"><span style="color: #1e1e1e;">Screen readers use different sound libraries for each </span><span style="color: #2b00fe;"><b>language, based on</b></span><span style="color: #1e1e1e;"> the pronunciation and characteristics of that language. Screen readers can switch between these language libraries easily, but only if the documents correctly specify which language(s) to read. If the language is not specified, the screen reader reads the document in the user's default language, resulting in a confusing accent! It is impossible to understand anything when screen readers are using the wrong language library.</span></p>
 
 
@@ -471,12 +483,13 @@ footer{
 
 <footer role="contentinfo">
 	<center>
-<p style="height: 80%; width: 100%; color: white; font-size: 12px; padding-bottom: 5px; padding-top: 5px;"> 
-    <a class="footer-link" href="#">Term & conditions</a> I 
-    <a  class="footer-link" href="#">Privacy Policy</a> I <a class="footer-link" href="#">ContactUS</a> I 
+<p style="height: 80%; width: 100%; color: white; font-size: 13px; padding-bottom: 10px; padding-top: 10px;"> 
+    <a class="footer-link" href="#">Aboutus</a> | 
+    <a class="footer-link" href="#">Term & conditions</a> | 
+    <a  class="footer-link" href="#">Privacy Policy</a> | <a class="footer-link" href="#">ContactUS</a> | 
     <a class="footer-link" href="#">disclaimber</a></p>
 
-<p style="height: 20%; width: 100%; color: yellow; border-top: 2px solid #323232; padding-top: 10px; padding-bottom: 10px;">©2026 I dream Success Classes</p>
+<p style="height: 20%; width: 100%; color: yellow; border-top: 2px solid #323232; padding-top: 10px; padding-bottom: 10px;">©2026 | dream Success Classes</p>
 </center>
 </footer>
 <script>
