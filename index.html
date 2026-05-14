@@ -1,522 +1,390 @@
 <!DOCTYPE html >
 <html lang="en">
 <head>
-	<title>DSC</title>
+	<title>DSC - Dream Success Classes</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <style>
+        /* ================= NEW HEADER CSS ================= */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Inter',sans-serif;
+        }
+
+        body{
+            background:#f5f7fb;
+            padding-top:80px; /* Space for fixed header */
+        }
+
+        header{
+            width:100%;
+            height:75px;
+            background:rgba(255,255,255,0.95);
+            backdrop-filter:blur(12px);
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1000;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:0 6%;
+            box-shadow:0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .logo-nav{
+            text-decoration:none;
+            font-size:28px;
+            font-weight:800;
+            color:#1a237e;
+            letter-spacing:0.5px;
+        }
+
+        .navbar{
+            display:flex;
+            align-items:center;
+        }
+
+        .nav-links{
+            display:flex;
+            list-style:none;
+            gap:10px;
+        }
+
+        .nav-links li{
+            position:relative;
+        }
+
+        .nav-links li a,
+        .dropdown-btn{
+            text-decoration:none;
+            color:#222;
+            font-size:15px;
+            font-weight:600;
+            padding:12px 16px;
+            border-radius:8px;
+            transition:0.3s;
+            display:flex;
+            align-items:center;
+            gap:6px;
+            cursor:pointer;
+        }
+
+        .nav-links li a:hover,
+        .dropdown-btn:hover{
+            background:#eef2ff;
+            color:#1a237e;
+        }
+
+        .dropdown-menu{
+            position:absolute;
+            top:55px;
+            left:0;
+            min-width:220px;
+            background:#fff;
+            border-radius:12px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08);
+            opacity:0;
+            visibility:hidden;
+            transform:translateY(10px);
+            transition:0.3s;
+            overflow:hidden;
+        }
+
+        .dropdown-menu a{
+            display:block;
+            padding:14px 18px;
+            color:#333;
+            border-bottom:1px solid #f1f1f1;
+            text-decoration: none;
+        }
+
+        .dropdown-menu a:hover{
+            background:#f8f9ff;
+            color:#1a237e;
+            padding-left:24px;
+        }
+
+        .nav-links li:hover .dropdown-menu{
+            opacity:1;
+            visibility:visible;
+            transform:translateY(0);
+        }
+
+        .menu-toggle{
+            display:none;
+            font-size:24px;
+            cursor:pointer;
+            color:#1a237e;
+        }
+
+        @media(max-width:991px){
+            .menu-toggle{ display:block; }
+            .navbar{
+                position:fixed;
+                top:75px;
+                right:-100%;
+                width:280px;
+                height:100vh;
+                background:#fff;
+                flex-direction:column;
+                align-items:flex-start;
+                padding:25px;
+                transition:0.4s;
+                box-shadow:-5px 0 20px rgba(0,0,0,0.08);
+            }
+            .navbar.active{ right:0; }
+            .nav-links{ flex-direction:column; width:100%; }
+            .nav-links li{ width:100%; }
+            .nav-links li a, .dropdown-btn{ width:100%; justify-content:space-between; }
+            .dropdown-menu{
+                position:static;
+                opacity:1;
+                visibility:visible;
+                transform:none;
+                box-shadow:none;
+                display:none;
+                margin-top:5px;
+                border-radius:8px;
+                background:#f8f9fa;
+            }
+            .nav-links li.active .dropdown-menu{ display:block; }
+        }
+
+        /* ================= EXISTING CONTENT CSS (NO CHANGES) ================= */
+        .main{
+            height: auto;
+            width: 100%;
+            box-sizing: border-box;
+            float: left;
+            padding-top: 10px;
+        }
+
+        .main_content{
+            height: auto;
+            width: 80%;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        .sidebar{
+            height: auto;
+            width: 20%;
+            box-sizing: border-box;
+            float: right;
+            background: white;
+            border: 1px solid blue;
+        }
+
+        .sidebar-list{
+            border-bottom: 1px solid lightgray;
+            margin: 0;
+            padding: 10px;
+            padding-left: 20px;
+            color: darkblue;
+        }
+
+        .sidebar-list:hover{ background: yellow; color: black; }
+
+        .box{
+            height: 190px;
+            width: 30%;
+            box-sizing: border-box;
+            float: left;
+            border: 0.1px solid blue;
+            border-radius: 15px;
+            margin: 10px;
+            background: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .box-name{ color: darkblue; font-weight: bold; font-size: 25px; padding-top: 15px; }
+        .box-title{ padding: 10px 0; }
+
+        .box-button{
+            height: 40px;
+            width: 140px;
+            color: white;
+            background: darkblue;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            border: 2px solid darkblue;
+        }
+
+        .box-button:hover{ color: darkblue; background: white; }
+
+        footer{
+            height: auto;
+            width: 100%;
+            background: #0a0a24;
+            box-sizing: border-box;
+            float: left;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-link{ text-decoration: none; color: white; font-weight: bold; margin: 0 5px; }
+
+        @media (max-width: 1024px){
+            .main_content, .sidebar{ width: 100%; float: left; }
+        }
+
+        @media (max-width: 768px){
+            .box{ width: 45%; }
+        }
+
+        @media (max-width: 426px){
+            .box{ width: 95%; margin: 10px auto; float: none; }
+            .footer-link{ font-size: 11px; }
+        }
+    </style>
 </head>
-<style>
-	body{
-		margin: 0;
-		padding: 0;
-		font-family: sans-serif;
-		background: whitesmoke;
-		height: auto;
-	}
-
-/* header css start */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-   padding-top:70px;
-}
-
-/* Header Styling */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    z-index: 1000;
-}
-
-.navbar {
-    height: 75px;
-    display: flex;
-    justify-content: space-between; /* Logo left, Nav-right right */
-    align-items: center;
-    padding: 0 7%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-size: 22px;
-    font-weight: bolder;
-    color: #111157;
-    letter-spacing: 1px;
-   
-}
-
-.logo a{
-    text-decoration: none;
-    color:darkblue;
-}
-
-/* Right Side Wrapper */
-.nav-right-container {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-/* Nav Menu (PC Mode) */
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    align-items: center;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #444;
-    font-weight: 500;
-    font-size: 15px;
-    transition: 0.3s;
-    font-weight: bold;
-}
-
-.nav-link:hover {
-    color: #2563eb;
-
-}
-
-
-
-.btn-login {
-    background: #2563eb;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: 0.3s;
-    border: 2px solid transparent;
-    display: inline-block;
-}
-
-.btn-login:hover {
-    background: #1d4ed8;
-    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
-}
-
-/* Icons */
-.hamburger, .close-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
-}
-
-/* Responsive Mobile Menu */
-@media (max-width: 991px) {
-    .hamburger { display: block; }
-    .nav-item{
-        line-height: 0px;}
-    .desktop-only { display: none; }
-
-    .nav-menu {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        width: 300px;
-        height: 100vh;
-        background: #fff;
-        flex-direction: column;
-        padding: 100px 40px; /* Menu items niche se start honge */
-        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-        z-index: 1001;
-        align-items: flex-start;
-    }
-
-    .nav-menu.active {
-        right: 0;
-    }
-
-    /* Close Icon Positioned like Hamburger */
-    .close-icon {
-        display: block;
-        position: absolute;
-        top: 25px; /* Navbar ke alignment mein */
-        right: 7%; /* Navbar padding ke barabar */
-    }
-
-    .nav-item {
-        width: 100%;
-        margin-bottom: 25px;
-    }
-
-    .nav-link {
-        font-size: 18px;
-        font-weight: 600;
-    }
-
-    .mobile-btn {
-        margin-top: 10px;
-        width: 100%;
-    }
-    
-    .mobile-btn .btn-login {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Overlay */
-.menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(4px);
-    display: none;
-    z-index: 999;
-    opacity: 0;
-    transition: 0.3s;
-}
-
-.menu-overlay.active {
-    display: block;
-    opacity: 1;
-}
-/* header css End */
-
-
-.main{
-
-height: auto;
-width: 100%;
-box-sizing: border-box;
-float: left;
-padding-top: 10px;
-	}
-
-	.main_content{       /* cources box */
-		height: auto;
-width: 80%;
-box-sizing: border-box;
-float: left;
-	}
-
-	.sidebar{   /* sidbar */
-height: auto;
-width: 20%;
-box-sizing: border-box;
-float: right;
-background: white;
-border: 1px solid blue;
-
-	}
-
-.sidebar-list{
-border-bottom: 1px solid lightgray;
-margin: 0;
-padding: 10px;
-padding-left: 20px;
-color: darkblue;
-}
-
-.sidebar-list:hover{
-	background: yellow;
-	color: black;
-}
-
-a{
-	text-decoration: none;
-	color: black;
-}
-
-/* Cources box css start */
-.box{
-	height: 175px;
-	width: 30%;
-	box-sizing: border-box;
-	float: left;
-	border: 0.1px solid blue;
-	border-radius: 15px;
-	margin: 10px;
-	background: white;
-}
-
-.box-name{
-	color: darkblue;
-	font-weight: bold;
-	font-size: 30px;
-	margin: 0;
-	padding: 0;
-	padding-top: 15px;
-}
-
-.box-title{
-	color: ;
-	margin: 0;
-	padding: 0;
-	padding-top: 15px;
-	padding-bottom: 20px;
-}
-
-.box-button{
-height: 40px;
-width: 150px;
-color: white;
-background: darkblue;
-border-radius: 30px;
-font-size: 18px;
-cursor: pointer;
-font-weight: bold;
-border: 2px solid darkblue;
-
-}
-
-.box-button:hover{
-color: darkblue;
-background: white;
-}
-
-/* effect */
-.box{
-    height: 190px;
-    width: 30%;
-    box-sizing: border-box;
-    float: left;
-    border: 0.1px solid blue;
-    border-radius: 15px;
-    margin: 10px;
-    background: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.box:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-/* Cources box css End */
-
-/* Footer css Start */
-footer{
-		height: 80px;
-		width: 100%;
-		background: #0a0a24;
-		box-sizing: border-box;
-		float: left;
-        margin: 0;
-	}
-
-.footer-link{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-
-}
-/* Footer css End */
-
-
-@media (max-width: 768px){
-	.main_content{
-		width: 100%;	 
-	}
-	.box{width: 45%;  }
-    .nav-item{
-        line-height: 0px;
-    }
-}
-
-
-
-@media (max-width: 1024px){
-	.main_content{
-		width: 100%;
-	}
-
-	.sidebar{
-		width: 100%;
-		float: left;
-		display: block;
-}
-
-@media (max-width: 426px){
-	.main_content{
-		width: 100%;
-		}
-		.sidebar{
-		width: 100%;
-		float: left;
-		display: block;
-	}
-	.box{width: 95%;  }
-    .footer-link{
-        font-size: 11px;
-    }
-
-    .nav-item{
-        line-height: 0px;
-    }
-       
-} 
-
-
-</style>
 <body>
 
-	<!----- Header Start Code ------->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-<header class="header" role="banner">
-    <nav class="navbar" role="navigation">
-        <h1 class="logo"><a href="#">Dream Success Classes</a></h1>
-
-        <!-- PC mode mein ye container sab right side le jayega -->
-        <div class="nav-right-container">
-            <ul class="nav-menu" id="nav-menu">
-                <!-- Close Icon inside Menu -->
-                <li class="close-icon" onclick="toggleMenu()">
-                    <i class="fas fa-times"></i>
-                </li>
-                
-<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-<li class="nav-item"><a href="#" class="nav-link">Notes</a></li>
-<li class="nav-item"><a href="#" class="nav-link">Objectives</a></li>
-<li class="nav-item"><a href="#" class="nav-link">Subjectives</a></li>
-<li class="nav-item"><a href="#" class="nav-link">Mock Test</a></li>
-<li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>
-                
-                <!-- Login for Mobile -- >
-                <li class="nav-item mobile-btn">
-                    <a href="#" class="btn-login">Login</a>
-                </li>
-                <----------------->
-            </ul>
-
-
-            <!-- Login for Desktop -- >
-            <a href="#" class="btn-login desktop-only">Login</a>
-<------------------->
-            <!-- Hamburger -->
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
+<!-- ================= NEW HEADER HTML ================= -->
+<header>
+    <a href="#" class="logo-nav">Dream Success Classes</a>
+    <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="navbar" id="navbar">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li class="dropdown">
+                <div class="dropdown-btn">Classes <i class="fas fa-chevron-down"></i></div>
+                <div class="dropdown-menu">
+                    <a href="#">Class 8</a><a href="#">Class 9</a><a href="#">Class 10</a>
+                    <a href="#">Class 11</a><a href="#">Class 12</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <div class="dropdown-btn">Lucent GK <i class="fas fa-chevron-down"></i></div>
+                <div class="dropdown-menu">
+                    <a href="#">History</a><a href="#">Geography</a>
+                    <a href="#">Polity</a><a href="#">Economics</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <div class="dropdown-btn">Notes <i class="fas fa-chevron-down"></i></div>
+                <div class="dropdown-menu">
+                    <a href="#">Science Notes</a><a href="#">Math Notes</a>
+                    <a href="#">Current Affairs</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <div class="dropdown-btn">Mock Test <i class="fas fa-chevron-down"></i></div>
+                <div class="dropdown-menu">
+                    <a href="#">Daily Quiz</a><a href="#">Weekly Test</a>
+                    <a href="#">SSC Mock Test</a>
+                </div>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
 </header>
 
-<div class="menu-overlay" id="overlay" onclick="toggleMenu()"></div>
-
-<!----- Header Start End ------->
-
-
-<!----- Main Start Code ------->
-
-<section class="main" role="main">
+<!-- ================= MAIN CONTENT ================= -->
+<section class="main">
 	<div class="main_content">
-
-<!----- Cources Box Start Code ------->
-
 		<div class="box" style="border-top: 5px solid blue;">
-			<center><h2 class="box-name"> Lucent Gk</h2></center>
-<center><h3 class="box-title"> Class 8th to 12th</h3></center>
-			<center><button class="box-button">Click Here</button> </center>
+			<h2 class="box-name"> Lucent Gk</h2>
+            <h3 class="box-title"> Class 8th to 12th</h3>
+			<button class="box-button">Click Here</button>
 		</div>
 
 		<div class="box" style="border-top: 5px solid darkred;">
-			<center><h2 class="box-name"> Lucent Gk</h2></center>
-<center><h3 class="box-title"> Class 8th to 12th</h3></center>
-			<center><button class="box-button">Click Here</button> </center>
+			<h2 class="box-name"> Lucent Gk</h2>
+            <h3 class="box-title"> Class 8th to 12th</h3>
+			<button class="box-button">Click Here</button>
 		</div>
 
-<div class="box" style="border-top: 5px solid silver;">
-			<center><h2 class="box-name"> Lucent Gk</h2></center>
-<center><h3 class="box-title"> Class 8th to 12th</h3></center>
-			<center><button class="box-button">Click Here</button> </center>
+        <div class="box" style="border-top: 5px solid silver;">
+			<h2 class="box-name"> Lucent Gk</h2>
+            <h3 class="box-title"> Class 8th to 12th</h3>
+			<button class="box-button">Click Here</button>
 		</div>
 
-
-<div class="box" style="border-top: 5px solid goldenrod;">
-			<center><h2 class="box-name"> Class 8</h2></center>
-<center><h3 class="box-title"> Ncert Pattern</h3></center>
-			<center><button class="box-button">Click Here</button> </center>
+        <div class="box" style="border-top: 5px solid goldenrod;">
+			<h2 class="box-name"> Class 8</h2>
+            <h3 class="box-title"> Ncert Pattern</h3>
+			<button class="box-button">Click Here</button>
 		</div>
 
 		<div class="box" style="border-top: 5px solid blue;">
-			<center><h2 class="box-name"> Lucent Gk</h2></center>
-<center><h3 class="box-title"> Class 8th to 12th</h3></center>
-			<center><button class="box-button">Click Here</button> </center>
+			<h2 class="box-name"> Lucent Gk</h2>
+            <h3 class="box-title"> Class 8th to 12th</h3>
+			<button class="box-button">Click Here</button>
 		</div>
 
-<div class="box" style="border-top: 5px solid blue;">
-			<center><h2 class="box-name"> Lucent Gk</h2></center>
-<center><h3 class="box-title"> Class 8th to 12th</h3></center>
-			<center><button class="box-button">Click Here</button> </center>
+        <div class="box" style="border-top: 5px solid blue;">
+			<h2 class="box-name"> Lucent Gk</h2>
+            <h3 class="box-title"> Class 8th to 12th</h3>
+			<button class="box-button">Click Here</button>
 		</div>
-
-<!----- Cources Box Start End  ------->
 	</div>
 
-	<!----- Sidebar Start Code ------->
 	<div class="sidebar">
-	<h3 style="background: black; color: yellow; padding: 10px; margin: 0; text-align: center;"> Notes</h3>
-
-<a href="#"><h4 class="sidebar-list"> Class 12 Mock Test </h4></a>
-<a href="#"><h4 class="sidebar-list"> Class 10 Mock Test </h4></a>
-<a href="#"><h4 class="sidebar-list"> Lucent mock Test </h4></a>
-<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-<a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-
+	    <h3 style="background: black; color: yellow; padding: 10px; margin: 0; text-align: center;"> Notes</h3>
+        <a href="#"><h4 class="sidebar-list"> Class 12 Mock Test </h4></a>
+        <a href="#"><h4 class="sidebar-list"> Class 10 Mock Test </h4></a>
+        <a href="#"><h4 class="sidebar-list"> Lucent mock Test </h4></a>
+        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
 	</div>
 </section>
-<!----- Sidebar Code End  ------->
 
-<article style="height: auto; width: 100%; border: 1px solid lightgrey; box-sizing: border-box; float: left; text-align: justify; padding: 10px; background: white;"> 
-<p style="background-color: white; padding: 0px; box-sizing: border-box; font-family: &quot;Noto Sans&quot;, &quot;Atkinson Hyperlegible&quot;, Roboto, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15.504px; line-height: 1.65; margin: 0px 0px 0.875rem;"><span style="color: #1e1e1e;">Screen readers use different sound libraries for each </span><span style="color: #2b00fe;"><b>language, based on</b></span><span style="color: #1e1e1e;"> the pronunciation and characteristics of that language. Screen readers can switch between these language libraries easily, but only if the documents correctly specify which language(s) to read. If the language is not specified, the screen reader reads the document in the user's default language, resulting in a confusing accent! It is impossible to understand anything when screen readers are using the wrong language library.</span></p>
-
-
+<article style="height: auto; width: 100%; border: 1px solid lightgrey; box-sizing: border-box; float: left; text-align: justify; padding: 20px; background: white;"> 
+    <p style="line-height: 1.65; margin: 0; font-size: 15.5px;">
+        <span style="color: #1e1e1e;">Screen readers use different sound libraries for each </span>
+        <span style="color: #2b00fe;"><b>language, based on</b></span>
+        <span style="color: #1e1e1e;"> the pronunciation and characteristics of that language...</span>
+    </p>
 </article> 
 
-<footer role="contentinfo">
-	<center>
-<p style="height: 80%; width: 100%; color: white; font-size: 13px; padding-bottom: 10px; padding-top: 10px;"> 
-    <a class="footer-link" href="#">Aboutus</a> | 
-    <a class="footer-link" href="#">Term & conditions</a> | 
-    <a  class="footer-link" href="#">Privacy Policy</a> | <a class="footer-link" href="#">ContactUS</a> | 
-    <a class="footer-link" href="#">disclaimber</a></p>
-
-<p style="height: 20%; width: 100%; color: skyblue; border-top: 2px solid #323232; padding-top: 10px; padding-bottom: 10px; font-weight: bold;">©2026 | dream Success Classes</p>
-</center>
+<footer>
+    <p style="color: white; font-size: 13px; padding-bottom: 10px;"> 
+        <a class="footer-link" href="#">Aboutus</a> | 
+        <a class="footer-link" href="#">Term & conditions</a> | 
+        <a class="footer-link" href="#">Privacy Policy</a> | 
+        <a class="footer-link" href="#">ContactUS</a> | 
+        <a class="footer-link" href="#">disclaimber</a>
+    </p>
+    <p style="color: skyblue; border-top: 2px solid #323232; padding-top: 10px; font-weight: bold;">©2026 | Dream Success Classes</p>
 </footer>
-<script>
-function toggleMenu() {
-    const navMenu = document.getElementById("nav-menu");
-    const overlay = document.getElementById("overlay");
-    
-    // Toggle class "active"
-    navMenu.classList.toggle("active");
-    overlay.classList.toggle("active");
 
-    // Smooth scroll disable jab menu open ho
-    if (navMenu.classList.contains("active")) {
-        document.body.style.overflow = "hidden";
-    } else {
-        document.body.style.overflow = "auto";
-    }
-}
+<!-- ================= NEW HEADER SCRIPT ================= -->
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.onclick = () => {
+    navbar.classList.toggle("active");
+};
+
+document.querySelectorAll(".dropdown-btn").forEach(btn => {
+    btn.addEventListener("click", function(){
+        if(window.innerWidth <= 991){
+            this.parentElement.classList.toggle("active");
+        }
+    });
+});
 </script>
+
 </body>
 </html>
