@@ -1,390 +1,712 @@
-<!DOCTYPE html >
-<html lang="en">
-<head>
-	<title>DSC - Dream Success Classes</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-    <style>
-        /* ================= NEW HEADER CSS ================= */
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Inter',sans-serif;
-        }
+<!DOCTYPE html ><html lang="en"><head>	<title>DSC</title>	<meta charset="utf-8">	<meta name="viewport" content="width=device-width, initial-scale=1">	<title></title></head><style>	body{		margin: 0;		padding: 0;		font-family: sans-serif;		background: #f8fafc;		height: auto;	}
+/* --- NEW PREMIUM HEADER CSS START --- */@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {    margin: 0;    padding: 0;    box-sizing: border-box;}
+body {    font-family: 'Poppins', sans-serif;   padding-top:80px;}
 
-        body{
-            background:#f5f7fb;
-            padding-top:80px; /* Space for fixed header */
-        }
+.header {    position: fixed;    top: 0;    left: 0;    width: 100%;    background: rgba(255, 255, 255, 0.85);    backdrop-filter: blur(12px);    -webkit-backdrop-filter: blur(12px);    border-bottom: 1px solid rgba(0, 0, 0, 0.05);    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);    z-index: 1000;    transition: all 0.3s ease;}
+.navbar {    height: 75px;    display: flex;    justify-content: space-between;    align-items: center;    padding: 0 4%;    max-width: 100%;    margin: 0 auto;}
+.logo {    font-size: 24px;    font-weight: 800;    letter-spacing: -0.5px;   }
+.logo a {    text-decoration: none;    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);    -webkit-background-clip: text;    -webkit-text-fill-color: transparent;    font-family: 'Poppins', sans-serif;}
+.nav-right-container {    display: flex;    align-items: center;    gap: 35px;}
+.nav-menu {    display: flex;    list-style: none;    gap: 30px;    align-items: center;}
+.nav-item {    position: relative;}
+.nav-link {    text-decoration: none;    color: #334155;    font-weight: 600;    font-size: 15px;    padding: 8px 0;    transition: color 0.3s ease;    display: flex;    align-items: center;    gap: 6px;}
+.nav-link::after {    content: '';    position: absolute;    bottom: 0;    left: 0;    width: 0;    height: 2px;    background: #2563eb;    transition: width 0.3s ease;    border-radius: 2px;}
+.nav-item:hover .nav-link::after {    width: 100%;}
+.nav-link:hover {    color: #2563eb;}
+.hamburger, .close-icon {    display: none;    font-size: 24px;    cursor: pointer;    color: #1e293b;}
 
-        header{
-            width:100%;
-            height:75px;
-            background:rgba(255,255,255,0.95);
-            backdrop-filter:blur(12px);
-            position:fixed;
-            top:0;
-            left:0;
-            z-index:1000;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            padding:0 6%;
-            box-shadow:0 4px 20px rgba(0,0,0,0.06);
-        }
+/* --- MODERN DROPDOWN --- */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    background-color: #ffffff;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    list-style: none;
+    padding: 12px;
+    min-width: 200px;
+    border-radius: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1002;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+.dropdown-menu li { width: 100%; }
+.dropdown-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: #475569;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.dropdown-menu a:hover {
+    background-color: #eff6ff;
+    color: #2563eb;
+}
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(5px);
+    }
+}
 
-        .logo-nav{
-            text-decoration:none;
-            font-size:28px;
-            font-weight:800;
-            color:#1a237e;
-            letter-spacing:0.5px;
-        }
+/* Responsive Mobile Header Menu */
+@media (max-width: 991px) {
+    .hamburger { display: block; }
+    .nav-menu { position: fixed; right: -100%; top: 0; width: 290px; height: 100vh; background: #fff; flex-direction: column; padding: 90px 24px 30px 24px; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: -15px 0 35px rgba(0,0,0,0.05); z-index: 1001; align-items: flex-start; overflow-y: auto; }
+    .nav-menu.active { right: 0; }
+    .close-icon { display: block; position: absolute; top: 25px; right: 24px; font-size: 22px; color: #1e293b; }
+    .nav-item { width: 100%; border-bottom: 1px solid #f1f5f9; }
+    .nav-link { padding: 16px 8px; font-size: 16px; color: #1e293b; width: 100%; justify-content: space-between; }
+    .nav-link::after { display: none; }
+    .mobile-btn { margin-top: 25px; padding: 0; border-bottom: none; width: 100%; }
+    .mobile-btn .btn-login { width: 100%; text-align: center; padding: 14px; border-radius: 10px; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; text-decoration: none; font-weight: 600; font-size: 14px; display: inline-block; }
+    .dropdown-menu { position: static; box-shadow: none; padding: 0 0 10px 15px; background: #f8fafc; max-height: 0; overflow: hidden; opacity: 1; visibility: visible; transform: none; width: 100%; border-radius: 0; border: none; }
+    .dropdown.open-active .dropdown-menu { max-height: 300px; margin-top: 5px; }
+    .dropdown.open-active > .nav-link { color: #2563eb; }
+}
+.menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.3); backdrop-filter: blur(4px); display: none; z-index: 999; opacity: 0; transition: 0.3s; }
+.menu-overlay.active { display: block; opacity: 1; }
+/* --- NEW PREMIUM HEADER CSS END --- */
 
-        .navbar{
-            display:flex;
-            align-items:center;
-        }
+/* --- HERO BANNER --- */
+.hero-banner {
+    width: 100%;
+    background: radial-gradient(circle at top right, rgba(29, 78, 216, 0.15), transparent), 
+                linear-gradient(135deg, #0b0f19 0%, #111827 50%, #1e3a8a 100%);
+    padding: 30px 3%;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    border-bottom: 4px solid #2563eb;
+}
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+}
+.hero-badge-ncert {
+    background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+    color: #ffffff;
+    padding: 5px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 15px;
+    letter-spacing: 0.8px;
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+}
+/* PC aur Normal modes ke liye heading ko optimize kiya (Pehle 38px tha) */
+.hero-banner h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: #ffffff;
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+}
+.hero-features-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+    max-width: 1000px;
+    margin: 0 auto 25px auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+}
+.feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+.feature-item i {
+    color: #10b981; 
+    font-size: 16px;
+    filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.4));
+    flex-shrink: 0;
+}
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    padding: 11px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+    display: inline-block;
+}
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    padding: 11px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
+    display: inline-block;
+}
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
 
-        .nav-links{
-            display:flex;
-            list-style:none;
-            gap:10px;
-        }
+/* --- MAIN LAYOUT --- */
+.main {
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+    padding: 30px 2%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; 
+}
+.main_content {       
+    width: 78%; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
 
-        .nav-links li{
-            position:relative;
-        }
+/* --- SIDEBAR --- */
+.sidebar {   
+    width: 21%; 
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    position: relative;
+}
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #0b0f19 0%, #2563eb 100%);
+}
+.sidebar-header {
+    background: #0b0f19; 
+    color: #eab308; 
+    padding: 18px 20px; 
+    margin: 0; 
+    text-align: center; 
+    font-size: 16px; 
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.sidebar-links-wrap {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-list {
+    margin: 0;
+    padding: 15px 20px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+}
+.sidebar-links-wrap a:last-child .sidebar-list {
+    border-bottom: none;
+}
+.sidebar-list::after {
+    content: '\2192'; 
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    color: #2563eb;
+    font-size: 16px;
+}
+.sidebar-links-wrap a:hover .sidebar-list {	
+    background: #eff6ff;	
+    color: #2563eb;
+    padding-left: 25px;
+}
+.sidebar-links-wrap a:hover .sidebar-list::after {
+    opacity: 1;
+    transform: translateX(0);
+}
 
-        .nav-links li a,
-        .dropdown-btn{
-            text-decoration:none;
-            color:#222;
-            font-size:15px;
-            font-weight:600;
-            padding:12px 16px;
-            border-radius:8px;
-            transition:0.3s;
-            display:flex;
-            align-items:center;
-            gap:6px;
-            cursor:pointer;
-        }
+a {	text-decoration: none;	color: black;}
 
-        .nav-links li a:hover,
-        .dropdown-btn:hover{
-            background:#eef2ff;
-            color:#1a237e;
-        }
+/* --- BOXES --- */
+.box {    
+    background: #ffffff;    
+    border-radius: 16px;    
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+}
+.box.blue-theme::before { background: #2563eb; }
+.box.red-theme::before { background: #dc2626; }
+.box.silver-theme::before { background: #94a3b8; }
+.box.gold-theme::before { background: #eab308; }
 
-        .dropdown-menu{
-            position:absolute;
-            top:55px;
-            left:0;
-            min-width:220px;
-            background:#fff;
-            border-radius:12px;
-            box-shadow:0 10px 30px rgba(0,0,0,0.08);
-            opacity:0;
-            visibility:hidden;
-            transform:translateY(10px);
-            transition:0.3s;
-            overflow:hidden;
-        }
+.box:hover {    
+    transform: translateY(-6px);    
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: #e2e8f0;
+}
+.box-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+.box.blue-theme .box-icon { color: #2563eb; }
+.box.red-theme .box-icon { color: #dc2626; }
+.box.silver-theme .box-icon { color: #64748b; }
+.box.gold-theme .box-icon { color: #d97706; }
 
-        .dropdown-menu a{
-            display:block;
-            padding:14px 18px;
-            color:#333;
-            border-bottom:1px solid #f1f1f1;
-            text-decoration: none;
-        }
+.box-name {	
+    color: #0f172a;	
+    font-weight: 700;	
+    font-size: 22px;	
+    margin: 0 0 10px 0;
+}
+.box-badge {	
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.box-button {
+    width: 100%;
+    height: 42px;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    border: none;
+}
+.box.blue-theme .box-button { background: #2563eb; }
+.box.blue-theme .box-button:hover { background: #1d4ed8; }
 
-        .dropdown-menu a:hover{
-            background:#f8f9ff;
-            color:#1a237e;
-            padding-left:24px;
-        }
+.box.red-theme .box-button { background: #dc2626; }
+.box.red-theme .box-button:hover { background: #b91c1c; }
 
-        .nav-links li:hover .dropdown-menu{
-            opacity:1;
-            visibility:visible;
-            transform:translateY(0);
-        }
+.box.silver-theme .box-button { background: #64748b; }
+.box.silver-theme .box-button:hover { background: #475569; }
 
-        .menu-toggle{
-            display:none;
-            font-size:24px;
-            cursor:pointer;
-            color:#1a237e;
-        }
+.box.gold-theme .box-button { background: #d97706; }
+.box.gold-theme .box-button:hover { background: #b45309; }
 
-        @media(max-width:991px){
-            .menu-toggle{ display:block; }
-            .navbar{
-                position:fixed;
-                top:75px;
-                right:-100%;
-                width:280px;
-                height:100vh;
-                background:#fff;
-                flex-direction:column;
-                align-items:flex-start;
-                padding:25px;
-                transition:0.4s;
-                box-shadow:-5px 0 20px rgba(0,0,0,0.08);
-            }
-            .navbar.active{ right:0; }
-            .nav-links{ flex-direction:column; width:100%; }
-            .nav-links li{ width:100%; }
-            .nav-links li a, .dropdown-btn{ width:100%; justify-content:space-between; }
-            .dropdown-menu{
-                position:static;
-                opacity:1;
-                visibility:visible;
-                transform:none;
-                box-shadow:none;
-                display:none;
-                margin-top:5px;
-                border-radius:8px;
-                background:#f8f9fa;
-            }
-            .nav-links li.active .dropdown-menu{ display:block; }
-        }
+/* --- FIXED FOOTER FOR PC AND LAPTOP MODE --- */
+.premium-footer {
+    background: #0b0f19;
+    color: #9ca3af;
+    padding: 60px 4% 20px 4%;
+    font-family: 'Poppins', sans-serif;
+    clear: both;
+    width: 100%;
+    float: left;
+    border-top: 4px solid #2563eb;
+    box-sizing: border-box;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 25px;
+    max-width: 100%;
+    margin: 0 auto 40px auto;
+}
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 40px; height: 2px;
+    background: #2563eb;
+}
+.footer-about p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+.social-icon {
+    width: 36px; height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.social-icon:hover {
+    background: #2563eb;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+}
+.footer-links-list {
+    list-style: none;
+    padding: 0; margin: 0;
+}
+.footer-links-list li {
+    margin-bottom: 12px;
+}
+.footer-links-list a {
+    color: #9ca3af;
+    font-size: 13px;
+    transition: 0.2s;
+    font-weight: 400;
+    text-decoration: none;
+}
+.footer-links-list a:hover {
+    color: #ffffff;
+    padding-left: 6px;
+}
+.footer-bottom {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.footer-bottom p {
+    font-size: 13px;
+    margin: 0;
+}
+.footer-legal-links {
+    display: flex;
+    gap: 20px;
+}
+.footer-legal-links a {
+    color: #6b7280;
+    font-size: 13px;
+    transition: 0.2s;
+}
+.footer-legal-links a:hover {
+    color: #ffffff;
+}
 
-        /* ================= EXISTING CONTENT CSS (NO CHANGES) ================= */
-        .main{
-            height: auto;
-            width: 100%;
-            box-sizing: border-box;
-            float: left;
-            padding-top: 10px;
-        }
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 1200px) {
+    .main_content { grid-template-columns: repeat(2, 1fr); width: 73%; }
+    .sidebar { width: 25%; }
+    .hero-banner h2 { font-size: 26px; } /* Medium screens ke liye thoda aur optimized */
+}
 
-        .main_content{
-            height: auto;
-            width: 80%;
-            box-sizing: border-box;
-            float: left;
-        }
+@media (max-width: 991px) {
+    .main { padding: 30px 4%; flex-direction: column; gap: 35px; }
+    .main_content { width: 100%; }
+    .sidebar { width: 100%; }
+    .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    .hero-banner h2 { font-size: 23px; } /* Laptop/Tab mode setup */
+}
 
-        .sidebar{
-            height: auto;
-            width: 20%;
-            box-sizing: border-box;
-            float: right;
-            background: white;
-            border: 1px solid blue;
-        }
+@media (max-width: 600px) {
+    /* Mobile optimization for heading text */
+    .hero-banner h2 {
+        font-size: 19px !important; /* Mobile screen me aur chhota aur clean kiya */
+        line-height: 1.35;
+        margin-bottom: 15px;
+        padding: 0 5px;
+    }
+    
+    .main_content { grid-template-columns: repeat(1, 1fr); } 
+    .hero-buttons { flex-direction: column; gap: 12px; width: 100%; }
+    .btn-primary, .btn-secondary { width: 100%; text-align: center; box-sizing: border-box; }
+    .footer-grid { grid-template-columns: repeat(1, 1fr); gap: 35px; }
+    
+    /* Mobile me Features ko 2,2 karke grid me adjust karne ke liye css */
+    .hero-features-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 10px;
+        padding: 15px;
+        text-align: left;
+    }
+    .feature-item {
+        font-size: 13px;
+    }
+}
+</style><body>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<header class="header" role="banner">    
+    <nav class="navbar" role="navigation">        
+        <h1 class="logo"><a href="#">Dream Success Classes</a></h1>
+        <div class="nav-right-container">            
+            <ul class="nav-menu" id="nav-menu">                
+                <li class="close-icon" onclick="toggleMenu()">                    
+                    <i class="fas fa-times"></i>                
+                </li>                
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link">Notes <i class="fas fa-chevron-down" style="font-size: 12px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Class 10th Notes</a></li>
+                        <li><a href="#">Class 12th Notes</a></li>
+                        <li><a href="#">Lucent GK Notes</a></li>
+                    </ul>
+                </li>
 
-        .sidebar-list{
-            border-bottom: 1px solid lightgray;
-            margin: 0;
-            padding: 10px;
-            padding-left: 20px;
-            color: darkblue;
-        }
+                <li class="nav-item dropdown">
+                    <a href="javascript:void(0)" class="nav-link">Mock Test <i class="fas fa-chevron-down" style="font-size: 12px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Online Test 1</a></li>
+                        <li><a href="#">Online Test 2</a></li>
+                    </ul>
+                </li>
 
-        .sidebar-list:hover{ background: yellow; color: black; }
+                <li class="nav-item"><a href="#" class="nav-link">Subjectives</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Blogs</a></li>                                
+                <li class="nav-item mobile-btn">                    
+                    <a href="#" class="btn-login">Login</a>                
+                </li>            
+            </ul>
 
-        .box{
-            height: 190px;
-            width: 30%;
-            box-sizing: border-box;
-            float: left;
-            border: 0.1px solid blue;
-            border-radius: 15px;
-            margin: 10px;
-            background: white;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
-
-        .box:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .box-name{ color: darkblue; font-weight: bold; font-size: 25px; padding-top: 15px; }
-        .box-title{ padding: 10px 0; }
-
-        .box-button{
-            height: 40px;
-            width: 140px;
-            color: white;
-            background: darkblue;
-            border-radius: 30px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: bold;
-            border: 2px solid darkblue;
-        }
-
-        .box-button:hover{ color: darkblue; background: white; }
-
-        footer{
-            height: auto;
-            width: 100%;
-            background: #0a0a24;
-            box-sizing: border-box;
-            float: left;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .footer-link{ text-decoration: none; color: white; font-weight: bold; margin: 0 5px; }
-
-        @media (max-width: 1024px){
-            .main_content, .sidebar{ width: 100%; float: left; }
-        }
-
-        @media (max-width: 768px){
-            .box{ width: 45%; }
-        }
-
-        @media (max-width: 426px){
-            .box{ width: 95%; margin: 10px auto; float: none; }
-            .footer-link{ font-size: 11px; }
-        }
-    </style>
-</head>
-<body>
-
-<!-- ================= NEW HEADER HTML ================= -->
-<header>
-    <a href="#" class="logo-nav">Dream Success Classes</a>
-    <div class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-    </div>
-    <nav class="navbar" id="navbar">
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li class="dropdown">
-                <div class="dropdown-btn">Classes <i class="fas fa-chevron-down"></i></div>
-                <div class="dropdown-menu">
-                    <a href="#">Class 8</a><a href="#">Class 9</a><a href="#">Class 10</a>
-                    <a href="#">Class 11</a><a href="#">Class 12</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <div class="dropdown-btn">Lucent GK <i class="fas fa-chevron-down"></i></div>
-                <div class="dropdown-menu">
-                    <a href="#">History</a><a href="#">Geography</a>
-                    <a href="#">Polity</a><a href="#">Economics</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <div class="dropdown-btn">Notes <i class="fas fa-chevron-down"></i></div>
-                <div class="dropdown-menu">
-                    <a href="#">Science Notes</a><a href="#">Math Notes</a>
-                    <a href="#">Current Affairs</a>
-                </div>
-            </li>
-            <li class="dropdown">
-                <div class="dropdown-btn">Mock Test <i class="fas fa-chevron-down"></i></div>
-                <div class="dropdown-menu">
-                    <a href="#">Daily Quiz</a><a href="#">Weekly Test</a>
-                    <a href="#">SSC Mock Test</a>
-                </div>
-            </li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+            <div class="hamburger" onclick="toggleMenu()">                
+                <i class="fas fa-bars"></i>            
+            </div>        
+        </div>    
     </nav>
 </header>
+<div class="menu-overlay" id="overlay" onclick="toggleMenu()"></div>
+<section class="hero-banner">
+    <div class="hero-badge-ncert"><i class="fas fa-graduation-cap"></i> 100% NCERT Pattern Par Aadharit</div>
+    <h2>Build Your Future With Quality Education</h2>
+    
+    <div class="hero-features-container">
+        <div class="feature-item"><i class="fas fa-check-circle"></i> Study Material</div>
+        <div class="feature-item"><i class="fas fa-check-circle"></i> Mock Test</div>
+        <div class="feature-item"><i class="fas fa-check-circle"></i> Online Test</div>
+        <div class="feature-item"><i class="fas fa-check-circle"></i> Lucent GK Special</div>
+        <div class="feature-item"><i class="fas fa-check-circle"></i> Subjective Practice</div>
+    </div>
 
-<!-- ================= MAIN CONTENT ================= -->
-<section class="main">
-	<div class="main_content">
-		<div class="box" style="border-top: 5px solid blue;">
-			<h2 class="box-name"> Lucent Gk</h2>
-            <h3 class="box-title"> Class 8th to 12th</h3>
-			<button class="box-button">Click Here</button>
-		</div>
+    <div class="hero-buttons">
+        <a href="#" class="btn-primary">Explore Notes</a>
+        <a href="#" class="btn-secondary">Take Mock Test</a>
+    </div>
+</section>
 
-		<div class="box" style="border-top: 5px solid darkred;">
-			<h2 class="box-name"> Lucent Gk</h2>
-            <h3 class="box-title"> Class 8th to 12th</h3>
-			<button class="box-button">Click Here</button>
+<section class="main" role="main">	
+    <div class="main_content">
+		<div class="box blue-theme">			
+		    <div class="box-icon"><i class="fas fa-book-open"></i></div>
+		    <h2 class="box-name">Lucent Gk</h2>
+		    <span class="box-badge">Class 8th to 12th</span>			
+		    <button class="box-button">Click Here</button>		
 		</div>
+		
+		<div class="box red-theme">			
+		    <div class="box-icon"><i class="fas fa-brain"></i></div>
+		    <h2 class="box-name">Lucent Gk</h2>
+		    <span class="box-badge">Class 8th to 12th</span>			
+		    <button class="box-button">Click Here</button>		
+		</div>
+		
+        <div class="box silver-theme">			
+            <div class="box-icon"><i class="fas fa-globe"></i></div>
+            <h2 class="box-name">Lucent Gk</h2>
+            <span class="box-badge">Class 8th to 12th</span>			
+            <button class="box-button">Click Here</button>		
+        </div>
 
-        <div class="box" style="border-top: 5px solid silver;">
-			<h2 class="box-name"> Lucent Gk</h2>
-            <h3 class="box-title"> Class 8th to 12th</h3>
-			<button class="box-button">Click Here</button>
+        <div class="box gold-theme">			
+            <div class="box-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h2 class="box-name">Class 8</h2>
+            <span class="box-badge">NCERT Pattern</span>			
+            <button class="box-button">Click Here</button>		
+        </div>
+        
+		<div class="box blue-theme">			
+		    <div class="box-icon"><i class="fas fa-book-open"></i></div>
+		    <h2 class="box-name">Lucent Gk</h2>
+		    <span class="box-badge">Class 8th to 12th</span>			
+		    <button class="box-button">Click Here</button>		
 		</div>
-
-        <div class="box" style="border-top: 5px solid goldenrod;">
-			<h2 class="box-name"> Class 8</h2>
-            <h3 class="box-title"> Ncert Pattern</h3>
-			<button class="box-button">Click Here</button>
-		</div>
-
-		<div class="box" style="border-top: 5px solid blue;">
-			<h2 class="box-name"> Lucent Gk</h2>
-            <h3 class="box-title"> Class 8th to 12th</h3>
-			<button class="box-button">Click Here</button>
-		</div>
-
-        <div class="box" style="border-top: 5px solid blue;">
-			<h2 class="box-name"> Lucent Gk</h2>
-            <h3 class="box-title"> Class 8th to 12th</h3>
-			<button class="box-button">Click Here</button>
-		</div>
+		
+        <div class="box blue-theme">			
+            <div class="box-icon"><i class="fas fa-book-open"></i></div>
+            <h2 class="box-name">Lucent Gk</h2>
+            <span class="box-badge">Class 8th to 12th</span>			
+            <button class="box-button">Click Here</button>		
+        </div>
 	</div>
-
-	<div class="sidebar">
-	    <h3 style="background: black; color: yellow; padding: 10px; margin: 0; text-align: center;"> Notes</h3>
-        <a href="#"><h4 class="sidebar-list"> Class 12 Mock Test </h4></a>
-        <a href="#"><h4 class="sidebar-list"> Class 10 Mock Test </h4></a>
-        <a href="#"><h4 class="sidebar-list"> Lucent mock Test </h4></a>
-        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
-        <a href="#"><h4 class="sidebar-list"> Class 11 Mock Test </h4></a>
+	
+	<div class="sidebar">	
+	    <h3 class="sidebar-header"><i class="fas fa-bolt"></i> Latest Tests</h3>
+        <div class="sidebar-links-wrap">
+            <a href="#"><h4 class="sidebar-list">Class 12 Mock Test</h4></a>
+            <a href="#"><h4 class="sidebar-list">Class 10 Mock Test</h4></a>
+            <a href="#"><h4 class="sidebar-list">Lucent Mock Test</h4></a>
+            <a href="#"><h4 class="sidebar-list">Class 11 Mock Test</h4></a>
+            <a href="#"><h4 class="sidebar-list">Class 9 Mock Test</h4></a>
+            <a href="#"><h4 class="sidebar-list">GK Live Test</h4></a>
+            <a href="#"><h4 class="sidebar-list">Science Quiz</h4></a>
+            <a href="#"><h4 class="sidebar-list">History Special</h4></a>
+        </div>
 	</div>
 </section>
 
-<article style="height: auto; width: 100%; border: 1px solid lightgrey; box-sizing: border-box; float: left; text-align: justify; padding: 20px; background: white;"> 
-    <p style="line-height: 1.65; margin: 0; font-size: 15.5px;">
-        <span style="color: #1e1e1e;">Screen readers use different sound libraries for each </span>
-        <span style="color: #2b00fe;"><b>language, based on</b></span>
-        <span style="color: #1e1e1e;"> the pronunciation and characteristics of that language...</span>
-    </p>
+<article style="height: auto; width: 100%; border: 1px solid lightgrey; box-sizing: border-box; float: left; text-align: justify; padding: 25px; background: white; margin-bottom: 20px;"> 
+    <p style="background-color: white; padding: 0px; box-sizing: border-box; font-family: 'Poppins', sans-serif; font-size: 15px; line-height: 1.65; margin: 0;"><span style="color: #1e1e1e;">Screen readers use different sound libraries for each </span><span style="color: #2b00fe;"><b>language, based on</b></span><span style="color: #1e1e1e;"> the pronunciation and characteristics of that language. Screen readers can switch between these language libraries easily, but only if the documents correctly specify which language(s) to read. If the language is not specified, the screen reader reads the document in the user's default language, resulting in a confusing accent! It is impossible to understand anything when screen readers are using the wrong language library.</span></p>
 </article> 
 
-<footer>
-    <p style="color: white; font-size: 13px; padding-bottom: 10px;"> 
-        <a class="footer-link" href="#">Aboutus</a> | 
-        <a class="footer-link" href="#">Term & conditions</a> | 
-        <a class="footer-link" href="#">Privacy Policy</a> | 
-        <a class="footer-link" href="#">ContactUS</a> | 
-        <a class="footer-link" href="#">disclaimber</a>
-    </p>
-    <p style="color: skyblue; border-top: 2px solid #323232; padding-top: 10px; font-weight: bold;">©2026 | Dream Success Classes</p>
+<footer class="premium-footer" role="contentinfo">
+    <div class="footer-grid">
+        <div class="footer-col footer-about">
+            <h3>Dream Success Classes</h3>
+            <p>Quality and pattern-focused digital education designed to boost your academic and competitive preparation smoothly.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Premium Notes</a></li>
+                <li><a href="#">Online Test Series</a></li>
+                <li><a href="#">Subjective Blogs</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-col">
+            <h3>Resources</h3>
+            <ul class="footer-links-list">
+                <li><a href="#">NCERT Mock Tests</a></li>
+                <li><a href="#">Lucent GK Special</a></li>
+                <li><a href="#">Class 10th Syllabus</a></li>
+                <li><a href="#">Class 12th Syllabus</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-col">
+            <h3>Mock Tests</h3>
+            <ul class="footer-links-list">
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:11px; margin-right:5px;"></i> Class 10th Mock Test</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:11px; margin-right:5px;"></i> Class 12th Mock Test</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:11px; margin-right:5px;"></i> Lucent GK Quiz</a></li>
+                <li><a href="#"><i class="fas fa-chevron-right" style="font-size:11px; margin-right:5px;"></i> Science Special Test</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>© 2026 | Dream Success Classes. All Rights Reserved.</p>
+        <div class="footer-legal-links">
+            <a href="#">About Us</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Disclaimer</a>
+        </div>
+    </div>
 </footer>
 
-<!-- ================= NEW HEADER SCRIPT ================= -->
 <script>
-const menuToggle = document.getElementById("menuToggle");
-const navbar = document.getElementById("navbar");
+function toggleMenu() {    
+    const navMenu = document.getElementById("nav-menu");    
+    const overlay = document.getElementById("overlay");        
+    
+    navMenu.classList.toggle("active");    
+    overlay.classList.toggle("active");
+    
+    if (navMenu.classList.contains("active")) {        
+        document.body.style.overflow = "hidden";    
+    } else {        
+        document.body.style.overflow = "auto";    
+        document.querySelectorAll('.dropdown').forEach(item => item.classList.remove('open-active'));
+    }
+}
 
-menuToggle.onclick = () => {
-    navbar.classList.toggle("active");
-};
-
-document.querySelectorAll(".dropdown-btn").forEach(btn => {
-    btn.addEventListener("click", function(){
-        if(window.innerWidth <= 991){
-            this.parentElement.classList.toggle("active");
+document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 991) {
+            e.preventDefault();
+            const parent = this.parentElement;
+            parent.classList.toggle('open-active');
         }
     });
 });
 </script>
-
-</body>
-</html>
+</body></html>
