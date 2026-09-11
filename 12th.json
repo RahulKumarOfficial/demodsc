@@ -1,0 +1,829 @@
+[
+  {
+    "question": {
+      "hi": "विद्युत क्षेत्र के लंबवत स्थित समविभव पृष्ठ का सही विकल्प कौन-सा है?",
+      "en": "Which is the correct equipotential surface perpendicular to the electric field?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["XY-तल", "YZ-तल", "XZ-तल", "इनमें से कोई नहीं"],
+      "en": ["XY-plane", "YZ-plane", "XZ-plane", "None of these"]
+    },
+    "answer": {
+      "hi": "XY-तल",
+      "en": "XY-plane"
+    }
+  },
+  {
+    "question": {
+      "hi": "एक आवेशित बूंद को 8 समान बूंदों में विभाजित किया जाता है। सभी बूंदों को मिलाकर एक बड़ी बूंद बनाई जाए तो उसकी वैद्युत स्थितिज ऊर्जा मूल बूंद की तुलना में कितनी होगी?",
+      "en": "A charged drop is divided into 8 equal drops. If all the drops are combined to form one large drop, how will its electrostatic energy compare with the original drop?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["32 गुना", "16 गुना", "8 गुना", "4 गुना"],
+      "en": ["32 times", "16 times", "8 times", "4 times"]
+    },
+    "answer": {
+      "hi": "32 गुना",
+      "en": "32 times"
+    }
+  },
+  {
+    "question": {
+      "hi": "किसी संधारित्र के बीच परावैद्युतांक 6 का पदार्थ रखने पर धारिता समान रखने के लिए प्लेटों के बीच की दूरी कितनी करनी होगी?",
+      "en": "A dielectric of dielectric constant 6 is inserted between the plates of a capacitor. To keep the capacitance unchanged, what should be the new separation between the plates?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["6d", "d/6", "36d", "d"],
+      "en": ["6d", "d/6", "36d", "d"]
+    },
+    "answer": {
+      "hi": "6d",
+      "en": "6d"
+    }
+  },
+  {
+    "question": {
+      "hi": "आवेशित चालक के अंदर विद्युत क्षेत्र का मान क्या होता है?",
+      "en": "What is the value of electric field inside a charged conductor?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["अधिकतम", "शून्य", "अनंत", "परिवर्ती"],
+      "en": ["Maximum", "Zero", "Infinite", "Variable"]
+    },
+    "answer": {
+      "hi": "शून्य",
+      "en": "Zero"
+    }
+  },
+  {
+    "question": {
+      "hi": "किसी संधारित्र के बीच परावैद्युत पदार्थ रखने पर उसकी धारिता क्या होती है?",
+      "en": "What happens to the capacitance of a capacitor when a dielectric is inserted between its plates?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["बढ़ती है", "घटती है", "शून्य हो जाती है", "अपरिवर्तित रहती है"],
+      "en": ["Increases", "Decreases", "Becomes zero", "Remains unchanged"]
+    },
+    "answer": {
+      "hi": "बढ़ती है",
+      "en": "Increases"
+    }
+  },
+  {
+    "question": {
+      "hi": "किसी पृथक चालक की धारिता का सूत्र क्या है?",
+      "en": "What is the formula for the capacitance of an isolated conductor?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["Q/V", "V/Q", "QV", "Q+V"],
+      "en": ["Q/V", "V/Q", "QV", "Q+V"]
+    },
+    "answer": {
+      "hi": "Q/V",
+      "en": "Q/V"
+    }
+  },
+  {
+    "question": {
+      "hi": "एक विद्युत द्विध्रुव को विद्युत क्षेत्र में घुमाने में किया गया कार्य किसके बराबर होता है?",
+      "en": "What is the work done in rotating an electric dipole in an electric field?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["pE(1 − cosθ)", "pE cosθ", "pE sinθ", "−pE(1 − cosθ)"],
+      "en": ["pE(1 − cosθ)", "pE cosθ", "pE sinθ", "−pE(1 − cosθ)"]
+    },
+    "answer": {
+      "hi": "pE(1 − cosθ)",
+      "en": "pE(1 − cosθ)"
+    }
+  },
+  {
+    "question": {
+      "hi": "यदि विद्युत क्षेत्र x-अक्ष के अनुदिश है, तो समविभव पृष्ठ होगा",
+      "en": "If the electric field is along the x-axis, the equipotential surface will be"
+    },
+    "image": "",
+    "options": {
+      "hi": ["XY-तल", "XZ-तल", "YZ-तल", "कोई नहीं"],
+      "en": ["XY-plane", "XZ-plane", "YZ-plane", "None"]
+    },
+    "answer": {
+      "hi": "YZ-तल",
+      "en": "YZ-plane"
+    }
+  },
+  {
+    "question": {
+      "hi": "आवेशित खोखले चालक के केंद्र पर विद्युत विभव कितना होता है?",
+      "en": "What is the electric potential at the center of a charged hollow conductor?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["शून्य", "सतह के विभव के बराबर", "अनंत", "दूरी के साथ बदलता है"],
+      "en": ["Zero", "Equal to the surface potential", "Infinite", "Changes with distance"]
+    },
+    "answer": {
+      "hi": "सतह के विभव के बराबर",
+      "en": "Equal to the surface potential"
+    }
+  },
+  {
+    "question": {
+      "hi": "5 μF के संधारित्र को 20,000 V तक आवेशित करने पर संचित ऊर्जा कितनी होगी?",
+      "en": "What is the energy stored in a 5 μF capacitor charged to 20,000 V?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["1 kJ", "2 kJ", "0.5 kJ", "10 kJ"],
+      "en": ["1 kJ", "2 kJ", "0.5 kJ", "10 kJ"]
+    },
+    "answer": {
+      "hi": "1 kJ",
+      "en": "1 kJ"
+    }
+  },
+  {
+    "question": {
+      "hi": "दो समान चिन्ह वाले आवेशों को एक-दूसरे से दूर करने पर उनकी वैद्युत स्थितिज ऊर्जा क्या होती है?",
+      "en": "What happens to the electrostatic potential energy when two like charges are moved farther apart?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["बढ़ती है", "घटती है", "शून्य हो जाती है", "अपरिवर्तित रहती है"],
+      "en": ["Increases", "Decreases", "Becomes zero", "Remains unchanged"]
+    },
+    "answer": {
+      "hi": "घटती है",
+      "en": "Decreases"
+    }
+  },
+  {
+    "question": {
+      "hi": "समानांतर प्लेट संधारित्र की धारिता प्लेटों के बीच की दूरी के",
+      "en": "The capacitance of a parallel plate capacitor is proportional to the"
+    },
+    "image": "",
+    "options": {
+      "hi": ["समानुपाती", "वर्ग के समानुपाती", "व्युत्क्रमानुपाती", "स्वतंत्र"],
+      "en": ["Directly proportional", "Square proportional", "Inversely proportional", "Independent"]
+    },
+    "answer": {
+      "hi": "व्युत्क्रमानुपाती",
+      "en": "Inversely proportional"
+    }
+  },
+  {
+    "question": {
+      "hi": "पोटेंशियोमीटर की संवेदनशीलता बढ़ाने के लिए क्या करना चाहिए?",
+      "en": "What should be done to increase the sensitivity of a potentiometer?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["धारा बढ़ानी चाहिए", "धारा घटानी चाहिए", "प्रतिरोध घटाना चाहिए", "विभव बढ़ाना चाहिए"],
+      "en": ["Increase current", "Decrease current", "Decrease resistance", "Increase potential"]
+    },
+    "answer": {
+      "hi": "धारा घटानी चाहिए",
+      "en": "Decrease current"
+    }
+  },
+  {
+    "question": {
+      "hi": "समान आवेश वाले दो गोलाकार चालकों में किसका विद्युत विभव अधिक होगा?",
+      "en": "Which of two spherical conductors having equal charges will have greater electric potential?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["छोटे त्रिज्या वाले का", "बड़े त्रिज्या वाले का", "दोनों का समान", "दोनों का शून्य"],
+      "en": ["The one with smaller radius", "The one with larger radius", "Both are equal", "Both are zero"]
+    },
+    "answer": {
+      "hi": "छोटे त्रिज्या वाले का",
+      "en": "The one with smaller radius"
+    }
+  },
+  {
+    "question": {
+      "hi": "दो समान धनावेशित चालक गोलों को पास लाने पर उनके बीच कार्य का चिन्ह क्या होगा?",
+      "en": "What is the sign of work done in bringing two similarly positively charged conducting spheres closer?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["धनात्मक", "ऋणात्मक", "शून्य", "अनंत"],
+      "en": ["Positive", "Negative", "Zero", "Infinite"]
+    },
+    "answer": {
+      "hi": "धनात्मक",
+      "en": "Positive"
+    }
+  },
+  {
+    "question": {
+      "hi": "एक समान रूप से आवेशित वलय के केंद्र पर विद्युत विभव क्या होता है?",
+      "en": "What is the electric potential at the center of a uniformly charged ring?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["kq/R", "शून्य", "kq/R²", "अनंत"],
+      "en": ["kq/R", "Zero", "kq/R²", "Infinite"]
+    },
+    "answer": {
+      "hi": "kq/R",
+      "en": "kq/R"
+    }
+  },
+  {
+    "question": {
+      "hi": "समविभव पृष्ठ पर किसी आवेश को एक बिंदु से दूसरे बिंदु तक ले जाने में किया गया कार्य कितना होता है?",
+      "en": "What is the work done in moving a charge from one point to another on an equipotential surface?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["अधिकतम", "न्यूनतम", "शून्य", "अनंत"],
+      "en": ["Maximum", "Minimum", "Zero", "Infinite"]
+    },
+    "answer": {
+      "hi": "शून्य",
+      "en": "Zero"
+    }
+  },
+  {
+    "question": {
+      "hi": "दो धनात्मक आवेशों के कारण विद्युत विभव शून्य कहाँ होगा?",
+      "en": "Where will the electric potential due to two positive charges be zero?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["मूल बिंदु पर", "दोनों आवेशों के बीच", "किसी सीमित बिंदु पर", "अनंत पर"],
+      "en": ["At the origin", "Between the two charges", "At a finite point", "At infinity"]
+    },
+    "answer": {
+      "hi": "अनंत पर",
+      "en": "At infinity"
+    }
+  },
+  {
+    "question": {
+      "hi": "दो आवेश +q और −q को समान दूरी पर रखने पर वैद्युत स्थितिज ऊर्जा का चिन्ह क्या होगा?",
+      "en": "What is the sign of electrostatic potential energy when charges +q and −q are placed at equal distance?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["धनात्मक", "ऋणात्मक", "शून्य", "अनंत"],
+      "en": ["Positive", "Negative", "Zero", "Infinite"]
+    },
+    "answer": {
+      "hi": "ऋणात्मक",
+      "en": "Negative"
+    }
+  },
+  {
+    "question": {
+      "hi": "+q, −q और +q आवेशों की त्रिकोणीय व्यवस्था की कुल वैद्युत स्थितिज ऊर्जा का चिन्ह क्या होगा?",
+      "en": "What is the sign of the total electrostatic potential energy of charges +q, −q and +q arranged in a triangle?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["धनात्मक", "ऋणात्मक", "शून्य", "अनंत"],
+      "en": ["Positive", "Negative", "Zero", "Infinite"]
+    },
+    "answer": {
+      "hi": "ऋणात्मक",
+      "en": "Negative"
+    }
+  },
+  {
+    "question": {
+      "hi": "वर्ग के चारों कोनों पर बारी-बारी से +q और −q आवेश रखने पर कुल वैद्युत स्थितिज ऊर्जा क्या होगी?",
+      "en": "What is the total electrostatic potential energy when +q and −q charges are placed alternately at the four corners of a square?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["−2 mJ", "−4 mJ", "−8 mJ", "इनमें से कोई नहीं"],
+      "en": ["−2 mJ", "−4 mJ", "−8 mJ", "None of these"]
+    },
+    "answer": {
+      "hi": "इनमें से कोई नहीं",
+      "en": "None of these"
+    }
+  },
+
+  {
+    "question": {
+      "hi": "किसी आवेशित चालक के अंदर रखे आवेश के कारण चालक की आंतरिक सतह पर प्रेरित आवेश कितना होगा?",
+      "en": "What is the induced charge on the inner surface of a conductor due to a charge placed inside it?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["+Q", "−Q", "0", "2Q"],
+      "en": ["+Q", "−Q", "0", "2Q"]
+    },
+    "answer": {
+      "hi": "−Q",
+      "en": "−Q"
+    }
+  },
+  {
+    "question": {
+      "hi": "चालक की बाहरी सतह पर कुल आवेश कितना होगा?",
+      "en": "What will be the total charge on the outer surface of the conductor?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["−Q", "+Q", "0", "2Q"],
+      "en": ["−Q", "+Q", "0", "2Q"]
+    },
+    "answer": {
+      "hi": "+Q",
+      "en": "+Q"
+    }
+  },
+  {
+    "question": {
+      "hi": "स्थिर वैद्युत संतुलन में चालक के अंदर विद्युत क्षेत्र कैसा होता है?",
+      "en": "What is the electric field inside a conductor in electrostatic equilibrium?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["अधिकतम", "न्यूनतम", "शून्य", "अनंत"],
+      "en": ["Maximum", "Minimum", "Zero", "Infinite"]
+    },
+    "answer": {
+      "hi": "शून्य",
+      "en": "Zero"
+    }
+  },
+  {
+    "question": {
+      "hi": "समान आकार के दो समान आवेशित गोलाकार चालकों को संपर्क कराने पर क्या होगा?",
+      "en": "What happens when two identical spherical conductors having equal charges are brought into contact?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["आवेश असमान हो जाएगा", "दोनों का आवेश समान रहेगा", "दोनों में आकर्षण होगा", "एक का आवेश शून्य हो जाएगा"],
+      "en": ["Charges become unequal", "Both charges remain equal", "They attract each other", "Charge on one becomes zero"]
+    },
+    "answer": {
+      "hi": "दोनों का आवेश समान रहेगा",
+      "en": "Both charges remain equal"
+    }
+  },
+  {
+    "question": {
+      "hi": "एक प्रोटॉन को दूसरे प्रोटॉन के निकट लाने पर वैद्युत स्थितिज ऊर्जा क्या होगी?",
+      "en": "What happens to the electrostatic potential energy when one proton is brought closer to another proton?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["बढ़ती है", "घटती है", "शून्य होती है", "अपरिवर्तित रहती है"],
+      "en": ["Increases", "Decreases", "Becomes zero", "Remains unchanged"]
+    },
+    "answer": {
+      "hi": "बढ़ती है",
+      "en": "Increases"
+    }
+  },
+  {
+    "question": {
+      "hi": "1000 समान छोटी बूंदों को मिलाकर एक बड़ी बूंद बनाई जाए तो 5 μF धारिता वाली प्रत्येक बूंद की बड़ी बूंद की धारिता कितनी होगी?",
+      "en": "If 1000 identical small drops are combined to form one large drop, what will be the capacitance of the large drop if each small drop has capacitance 5 μF?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["50 μF", "500 μF", "5 μF", "10 μF"],
+      "en": ["50 μF", "500 μF", "5 μF", "10 μF"]
+    },
+    "answer": {
+      "hi": "50 μF",
+      "en": "50 μF"
+    }
+  },
+  {
+    "question": {
+      "hi": "इलेक्ट्रॉन-वोल्ट किसकी इकाई है?",
+      "en": "Electron-volt is a unit of"
+    },
+    "image": "",
+    "options": {
+      "hi": ["आवेश", "विभव", "ऊर्जा", "धारिता"],
+      "en": ["Charge", "Potential", "Energy", "Capacitance"]
+    },
+    "answer": {
+      "hi": "ऊर्जा",
+      "en": "Energy"
+    }
+  },
+  {
+    "question": {
+      "hi": "यदि 2 कूलम्ब आवेश को ले जाने में 20 जूल कार्य किया जाए तो विभवांतर कितना होगा?",
+      "en": "If 20 J of work is done in moving a charge of 2 C, what is the potential difference?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["10 V", "20 V", "40 V", "5 V"],
+      "en": ["10 V", "20 V", "40 V", "5 V"]
+    },
+    "answer": {
+      "hi": "10 V",
+      "en": "10 V"
+    }
+  },
+  {
+    "question": {
+      "hi": "धनावेशित खोखले चालक के अंदर विद्युत विभव कैसा होता है?",
+      "en": "What is the electric potential inside a positively charged hollow conductor?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["शून्य", "धनात्मक और नियत", "ऋणात्मक", "अनंत"],
+      "en": ["Zero", "Positive and constant", "Negative", "Infinite"]
+    },
+    "answer": {
+      "hi": "धनात्मक और नियत",
+      "en": "Positive and constant"
+    }
+  },
+  {
+    "question": {
+      "hi": "तीन समान संधारित्रों को श्रेणी क्रम में जोड़ने पर तुल्य धारिता क्या होगी?",
+      "en": "What is the equivalent capacitance when three identical capacitors are connected in series?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["3C", "C", "C/3", "C/2"],
+      "en": ["3C", "C", "C/3", "C/2"]
+    },
+    "answer": {
+      "hi": "C/3",
+      "en": "C/3"
+    }
+  },
+  {
+    "question": {
+      "hi": "किसी पृथक गोलाकार चालक की धारिता किसके समानुपाती होती है?",
+      "en": "The capacitance of an isolated spherical conductor is proportional to"
+    },
+    "image": "",
+    "options": {
+      "hi": ["1/R", "R", "R²", "1/R²"],
+      "en": ["1/R", "R", "R²", "1/R²"]
+    },
+    "answer": {
+      "hi": "R",
+      "en": "R"
+    }
+  },
+  {
+    "question": {
+      "hi": "दो समान आकार के चालक गोलों को संपर्क में लाने पर आवेश का क्या होता है?",
+      "en": "What happens to the charge when two identical conducting spheres are brought into contact?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["कुल आवेश संरक्षित रहता है", "कुल आवेश नष्ट हो जाता है", "आवेश दोगुना हो जाता है", "आवेश आधा हो जाता है"],
+      "en": ["Total charge is conserved", "Total charge is destroyed", "Charge doubles", "Charge becomes half"]
+    },
+    "answer": {
+      "hi": "कुल आवेश संरक्षित रहता है",
+      "en": "Total charge is conserved"
+    }
+  },
+  {
+    "question": {
+      "hi": "एक समान विद्युत क्षेत्र में आदर्श विद्युत द्विध्रुव पर परिणामी बल कितना होता है?",
+      "en": "What is the net force on an ideal electric dipole in a uniform electric field?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["शून्य", "अधिकतम", "अनंत", "परिवर्ती"],
+      "en": ["Zero", "Maximum", "Infinite", "Variable"]
+    },
+    "answer": {
+      "hi": "शून्य",
+      "en": "Zero"
+    }
+  },
+  {
+    "question": {
+      "hi": "चंद्रमा की लगभग वैद्युत धारिता कितनी है?",
+      "en": "What is the approximate capacitance of the Moon?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["710 μF", "71 μF", "7.1 μF", "7100 μF"],
+      "en": ["710 μF", "71 μF", "7.1 μF", "7100 μF"]
+    },
+    "answer": {
+      "hi": "710 μF",
+      "en": "710 μF"
+    }
+  },
+  {
+    "question": {
+      "hi": "धारिता का सही सूत्र क्या है?",
+      "en": "What is the correct formula for capacitance?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["C = Q/V", "C = V/Q", "C = QV", "C = Q + V"],
+      "en": ["C = Q/V", "C = V/Q", "C = QV", "C = Q + V"]
+    },
+    "answer": {
+      "hi": "C = Q/V",
+      "en": "C = Q/V"
+    }
+  },
+  {
+    "question": {
+      "hi": "विद्युत धारिता की SI इकाई क्या है?",
+      "en": "What is the SI unit of capacitance?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["वोल्ट", "कूलॉम", "फैरड", "जूल"],
+      "en": ["Volt", "Coulomb", "Farad", "Joule"]
+    },
+    "answer": {
+      "hi": "फैरड",
+      "en": "Farad"
+    }
+  },
+
+  {
+    "question": {
+      "hi": "पृथक गोलाकार चालक की धारिता उसकी त्रिज्या के",
+      "en": "The capacitance of an isolated spherical conductor is proportional to its"
+    },
+    "image": "",
+    "options": {
+      "hi": ["व्युत्क्रमानुपाती", "समानुपाती", "वर्ग के समानुपाती", "स्वतंत्र"],
+      "en": ["Inversely proportional", "Directly proportional", "Proportional to square", "Independent"]
+    },
+    "answer": {
+      "hi": "समानुपाती",
+      "en": "Directly proportional"
+    }
+  },
+  {
+    "question": {
+      "hi": "दो चालकों के बीच आवेश के पुनर्वितरण के दौरान वैद्युत स्थितिज ऊर्जा सामान्यतः",
+      "en": "During redistribution of charge between two conductors, electrostatic potential energy generally"
+    },
+    "image": "",
+    "options": {
+      "hi": ["घटती है", "बढ़ती है", "अपरिवर्तित रहती है", "अनंत हो जाती है"],
+      "en": ["Decreases", "Increases", "Remains unchanged", "Becomes infinite"]
+    },
+    "answer": {
+      "hi": "घटती है",
+      "en": "Decreases"
+    }
+  },
+  {
+    "question": {
+      "hi": "समानांतर प्लेट संधारित्र में प्लेटों की दूरी बढ़ाने पर धारिता",
+      "en": "When the separation between the plates of a parallel plate capacitor is increased, its capacitance"
+    },
+    "image": "",
+    "options": {
+      "hi": ["बढ़ती है", "घटती है", "समान रहती है", "पहले बढ़ती फिर घटती है"],
+      "en": ["Increases", "Decreases", "Remains same", "First increases then decreases"]
+    },
+    "answer": {
+      "hi": "घटती है",
+      "en": "Decreases"
+    }
+  },
+  {
+    "question": {
+      "hi": "संधारित्र की प्लेटों के बीच काँच रखने पर उसकी धारिता",
+      "en": "When glass is inserted between the plates of a capacitor, its capacitance"
+    },
+    "image": "",
+    "options": {
+      "hi": ["बढ़ती है", "घटती है", "शून्य हो जाती है", "समान रहती है"],
+      "en": ["Increases", "Decreases", "Becomes zero", "Remains same"]
+    },
+    "answer": {
+      "hi": "बढ़ती है",
+      "en": "Increases"
+    }
+  },
+  {
+    "question": {
+      "hi": "श्रेणी क्रम में जुड़े संधारित्रों में कौन-सी राशि समान रहती है?",
+      "en": "Which quantity remains the same for capacitors connected in series?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["विभव", "आवेश", "धारिता", "ऊर्जा"],
+      "en": ["Potential", "Charge", "Capacitance", "Energy"]
+    },
+    "answer": {
+      "hi": "आवेश",
+      "en": "Charge"
+    }
+  },
+  {
+    "question": {
+      "hi": "समानांतर क्रम में जुड़े संधारित्रों में कौन-सी राशि समान रहती है?",
+      "en": "Which quantity remains the same for capacitors connected in parallel?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["आवेश", "धारिता", "विभवांतर", "ऊर्जा"],
+      "en": ["Charge", "Capacitance", "Potential difference", "Energy"]
+    },
+    "answer": {
+      "hi": "विभवांतर",
+      "en": "Potential difference"
+    }
+  },
+  {
+    "question": {
+      "hi": "तीन समान संधारित्र, प्रत्येक की धारिता C, को समानांतर जोड़ने पर तुल्य धारिता होगी",
+      "en": "Three identical capacitors, each of capacitance C, are connected in parallel. Their equivalent capacitance is"
+    },
+    "image": "",
+    "options": {
+      "hi": ["C/3", "3C", "C/2", "2C"],
+      "en": ["C/3", "3C", "C/2", "2C"]
+    },
+    "answer": {
+      "hi": "3C",
+      "en": "3C"
+    }
+  },
+  {
+    "question": {
+      "hi": "तीन समान संधारित्रों को किस क्रम में जोड़ने पर अधिकतम तुल्य धारिता प्राप्त होगी?",
+      "en": "In which arrangement of three identical capacitors is the maximum equivalent capacitance obtained?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["श्रेणी क्रम", "समानांतर क्रम", "मिश्रित क्रम", "किसी भी क्रम में"],
+      "en": ["Series", "Parallel", "Mixed", "Any arrangement"]
+    },
+    "answer": {
+      "hi": "समानांतर क्रम",
+      "en": "Parallel"
+    }
+  },
+  {
+    "question": {
+      "hi": "किसी पृथक आवेशित चालक के पास भू-संपर्कित चालक लाने पर उसकी धारिता",
+      "en": "When a grounded conductor is brought near an isolated charged conductor, its capacitance"
+    },
+    "image": "",
+    "options": {
+      "hi": ["घटती है", "बढ़ती है", "शून्य होती है", "अपरिवर्तित रहती है"],
+      "en": ["Decreases", "Increases", "Becomes zero", "Remains unchanged"]
+    },
+    "answer": {
+      "hi": "बढ़ती है",
+      "en": "Increases"
+    }
+  },
+  {
+    "question": {
+      "hi": "वैद्युत स्थैतिक संतुलन में चालक के अंदर विद्युत क्षेत्र",
+      "en": "In electrostatic equilibrium, the electric field inside a conductor is"
+    },
+    "image": "",
+    "options": {
+      "hi": ["अधिकतम", "न्यूनतम", "शून्य", "अनंत"],
+      "en": ["Maximum", "Minimum", "Zero", "Infinite"]
+    },
+    "answer": {
+      "hi": "शून्य",
+      "en": "Zero"
+    }
+  },
+  {
+    "question": {
+      "hi": "वैन डी ग्राफ जनित्र का उपयोग मुख्यतः किसके लिए किया जाता है?",
+      "en": "The Van de Graaff generator is mainly used for"
+    },
+    "image": "",
+    "options": {
+      "hi": ["बहुत कम विभव के लिए", "कम धारा के लिए", "बहुत उच्च विभवांतर उत्पन्न करने के लिए", "प्रतिरोध मापने के लिए"],
+      "en": ["Very low potential", "Low current", "Generating very high potential difference", "Measuring resistance"]
+    },
+    "answer": {
+      "hi": "बहुत उच्च विभवांतर उत्पन्न करने के लिए",
+      "en": "Generating very high potential difference"
+    }
+  },
+  {
+    "question": {
+      "hi": "दो समान संधारित्र, प्रत्येक की धारिता C, को श्रेणी क्रम में जोड़ने पर तुल्य धारिता होगी",
+      "en": "Two identical capacitors, each of capacitance C, are connected in series. Their equivalent capacitance is"
+    },
+    "image": "",
+    "options": {
+      "hi": ["2C", "C", "C/2", "C/4"],
+      "en": ["2C", "C", "C/2", "C/4"]
+    },
+    "answer": {
+      "hi": "C/2",
+      "en": "C/2"
+    }
+  },
+  {
+    "question": {
+      "hi": "अधिकतम तुल्य धारिता प्राप्त करने के लिए संधारित्रों को किस क्रम में जोड़ा जाता है?",
+      "en": "Capacitors are connected in which arrangement to obtain maximum equivalent capacitance?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["श्रेणी में", "समानांतर में", "मिश्रित में", "किसी भी क्रम में"],
+      "en": ["In series", "In parallel", "In mixed arrangement", "In any arrangement"]
+    },
+    "answer": {
+      "hi": "समानांतर में",
+      "en": "In parallel"
+    }
+  },
+  {
+    "question": {
+      "hi": "संधारित्र में अभ्रक डालने पर उसकी धारिता",
+      "en": "When mica is inserted into a capacitor, its capacitance"
+    },
+    "image": "",
+    "options": {
+      "hi": ["बढ़ती है", "घटती है", "शून्य होती है", "अपरिवर्तित रहती है"],
+      "en": ["Increases", "Decreases", "Becomes zero", "Remains unchanged"]
+    },
+    "answer": {
+      "hi": "बढ़ती है",
+      "en": "Increases"
+    }
+  },
+  {
+    "question": {
+      "hi": "किसी सामान्य परावैद्युत पदार्थ का परावैद्युतांक K होता है",
+      "en": "The dielectric constant K of an ordinary dielectric material is"
+    },
+    "image": "",
+    "options": {
+      "hi": ["K < 0", "K = 0", "K > 1", "K = 1 हमेशा"],
+      "en": ["K < 0", "K = 0", "K > 1", "K is always 1"]
+    },
+    "answer": {
+      "hi": "K > 1",
+      "en": "K > 1"
+    }
+  },
+  {
+    "question": {
+      "hi": "पृथक आवेशित संधारित्र में परावैद्युतांक K का पदार्थ पूर्णतः भरने पर विद्युत क्षेत्र",
+      "en": "When a dielectric of dielectric constant K is completely inserted into an isolated charged capacitor, the electric field"
+    },
+    "image": "",
+    "options": {
+      "hi": ["KE", "E/K", "E+K", "E"],
+      "en": ["KE", "E/K", "E+K", "E"]
+    },
+    "answer": {
+      "hi": "E/K",
+      "en": "E/K"
+    }
+  },
+  {
+    "question": {
+      "hi": "वायु के स्थान पर परावैद्युतांक K का माध्यम रखने पर संधारित्र की धारिता",
+      "en": "When a medium of dielectric constant K replaces air, the capacitance of a capacitor"
+    },
+    "image": "",
+    "options": {
+      "hi": ["K गुना बढ़ती है", "K गुना घटती है", "अपरिवर्तित रहती है", "शून्य हो जाती है"],
+      "en": ["Increases K times", "Decreases K times", "Remains unchanged", "Becomes zero"]
+    },
+    "answer": {
+      "hi": "K गुना बढ़ती है",
+      "en": "Increases K times"
+    }
+  },
+  {
+    "question": {
+      "hi": "आठ समान आवेशित बूंदों को मिलाकर एक बड़ी बूंद बनाई जाए तो बड़ी बूंद और छोटी बूंद के विभव का अनुपात क्या होगा?",
+      "en": "If eight identical charged drops are combined to form one large drop, what is the ratio of the potential of the large drop to that of a small drop?"
+    },
+    "image": "",
+    "options": {
+      "hi": ["2:1", "4:1", "8:1", "1:2"],
+      "en": ["2:1", "4:1", "8:1", "1:2"]
+    },
+    "answer": {
+      "hi": "4:1",
+      "en": "4:1"
+    }
+  }
+]
